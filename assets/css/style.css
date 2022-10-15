@@ -4,12 +4,24 @@
     align-items: center;
 }
 
-.hero.is-fullheight
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+.hero 
 .hero-body {
     align-items: flex-start;
     display: flex;
     justify-content: space-evenly;
 }
+
+
+aside {
+    margin: 10px auto 10px auto;
+}
+
+
 
 /* @media (max-width: 1024px) { .hero { background: black url(C:\Users\olive\Documents\UCF\Project-01\The-SpeakEasy-Project\assets\images\cosmopolitan-delish.jpg) center / cover; } }
 @media (max-width: 768px) { .hero { background: black url(C:\Users\olive\Documents\UCF\Project-01\The-SpeakEasy-Project\assets\images\cosmopolitan-delish.jpg) center / cover; } } */
