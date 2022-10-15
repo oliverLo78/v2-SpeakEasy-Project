@@ -1,8 +1,8 @@
-.center {
+/* .center {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 figure {
     display: flex;
@@ -14,29 +14,43 @@ figure {
     align-items: flex-start;
     display: flex;
     justify-content: space-evenly;
+    
 }
 
-.section {
-    display: inline-flex;
+section {
+    display: flex;
+    border: 5px solid goldenrod;
+    background-color: grey;
 }
 
-/* @media (max-width: 1024px) { .hero { background: black url(C:\Users\olive\Documents\UCF\Project-01\The-SpeakEasy-Project\assets\images\cosmopolitan-delish.jpg) center / cover; } }
-@media (max-width: 768px) { .hero { background: black url(C:\Users\olive\Documents\UCF\Project-01\The-SpeakEasy-Project\assets\images\cosmopolitan-delish.jpg) center / cover; } } */
- 
+.columns:not(.is-desktop) {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .container {
+  max-width: 1344px;
+  margin-left: 100px;
+} */
+
+/* body {
+  position: relative;
+} */
+
 @media only screen and (max-width:800px) {
   /* For tablets: */
-  .container {
+  /* .container {
     width: 80%;
     padding: 0;
   }
    {
     width: 100%;
   }
-} 
+}  */
 
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
-  .container {
+  /* .container {
     width: 100%;
   }
-}
+} */
