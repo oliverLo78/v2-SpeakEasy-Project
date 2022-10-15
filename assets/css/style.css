@@ -16,26 +16,24 @@ figure {
     justify-content: space-evenly;
 }
 
-
-aside {
-    margin: 10px auto 10px auto;
+.section {
+    display: inline-flex;
 }
-
-
 
 /* @media (max-width: 1024px) { .hero { background: black url(C:\Users\olive\Documents\UCF\Project-01\The-SpeakEasy-Project\assets\images\cosmopolitan-delish.jpg) center / cover; } }
 @media (max-width: 768px) { .hero { background: black url(C:\Users\olive\Documents\UCF\Project-01\The-SpeakEasy-Project\assets\images\cosmopolitan-delish.jpg) center / cover; } } */
-
+ 
 @media only screen and (max-width:800px) {
   /* For tablets: */
   .container {
     width: 80%;
     padding: 0;
   }
-  .field {
+   {
     width: 100%;
   }
-}
+} 
+
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
   .container {
