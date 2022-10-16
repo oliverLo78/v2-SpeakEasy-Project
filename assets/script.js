@@ -1,7 +1,7 @@
 var drink;
 var input;
 var requestDrink;
-var apiRootCocktailURL = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?';
+var apiRootCocktailURL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?';
 var requestVideo;
 var apiRootYouTubeURL = 'https://www.googleapis.com/youtube/v3/search?maxResults=3&safeSearch=moderate&videoEmbeddable=true&type=video&part=snippet&key=AIzaSyC5toGw1SSB32wE6uogT2Hk25_CWavryVo&';
 var youTubeVid1;
