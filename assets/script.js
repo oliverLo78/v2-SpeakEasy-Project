@@ -46,10 +46,10 @@ function getDrink(requestDrink){
         })
         .then(function(data){
             // for (var i = 0; i < data.drinks.length; i++) {
-            // console.log(data.drinks);
-            var drinkName = document.createElement('h2');
+            console.log(data.drinks);
+            var drinkName = document.createElement('h1');
             drinkName.textContent = data.drinks[0].strDrink;
-            $('div#drinkName').append(drinkName);
+            $('h1#drinkName').append(drinkName);
             var drinkIng1 = document.createElement('li');
             drinkIng1.textContent = data.drinks[0].strIngredient1;
             var drinkIng2 = document.createElement('li');
@@ -100,22 +100,26 @@ function getVideo(requestVideo){
         $('div#youTubeVid1').append(b1);
         var a2 = document.createElement('iframe');
         a2.setAttribute('class','has-ratio');
-        a2.setAttribute('width','320');
+        a2.setAttribute('width','340');
         a2.setAttribute('height','180');
         a2.setAttribute('src',youTubeVid2);
         var b2 = document.createElement('figure');
-        b2.setAttribute('class','image is-16by9');
+        b2.setAttribute('class','small-video');
+        b2.setAttribute('class','display is-inline');
+        b2.setAttribute('class','image is-13by4');
         $(b2).append(a2);
-        $('div#youTubeVid2').append(b2);  
+        $('div#youTubeVid1').append(b2);  
         var a3 = document.createElement('iframe');
         a3.setAttribute('class','has-ratio');
-        a3.setAttribute('width','320');
+        a3.setAttribute('width','340');
         a3.setAttribute('height','180');
         a3.setAttribute('src',youTubeVid3);
         var b3 = document.createElement('figure');
-        b3.setAttribute('class','image is-16by9');
+        b2.setAttribute('class','small-video');
+        b2.setAttribute('class','display is-inline');
+        b2.setAttribute('class','image is-13by4');
         $(b3).append(a3);      
-        $('div#youTubeVid3').append(b3);        
+        $('div#youTubeVid1').append(b3);        
         });
 }
 
@@ -160,24 +164,24 @@ function getVideo(requestVideo){
 
 // ****************************** Handlers ***************************************************** //
 // Select increment and decrement button elements
-var count = 0;
-var btnSearchEl = document.querySelector("#increment");
-var countEl = document.querySelector("#count");
-// var hideCardsEl = document.querySelector("#hideCards");
+// var count = 0;
+// var btnSearchEl = document.querySelector("#increment");
+// var countEl = document.querySelector("#count");
+// // var hideCardsEl = document.querySelector("#hideCards");
 
-// Updates count on page
-function setCounterText() {
-    countEl.textContent = count;
-}
+// // Updates count on page
+// function setCounterText() {
+//     countEl.textContent = count;
+// }
 
-function increment(event) {
-    console.log(event);
-    //
-}
+// function increment(event) {
+//     console.log(event);
+//     //
+// }
 
 
-// Attach event listener to increment button element
-btnSearchEl.addEventListener("click", increment);
-// Attach event listener to decrement button element
-hideCardsEl.addEventListener("click", hideCardsEl);
+// // Attach event listener to increment button element
+// btnSearchEl.addEventListener("click", increment);
+// // Attach event listener to decrement button element
+// hideCardsEl.addEventListener("click", hideCardsEl);
 
