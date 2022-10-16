@@ -1,26 +1,19 @@
-/* .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+.image.is-4by5 {
+    padding-top: 125%;
+}
 
-figure {
-    display: flex;
-   
-    justify-content: center;
-
+.image {
+    position: relative;
+    margin-top: 24px;
 }
 
 .hero 
 .hero-body {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-direction: column;
 }
-
-/* .hero {
-  background-image: url("/assets/images/cosmopolitan-delish.jpg");
-} */
 
 section {
     display: flex;
@@ -33,24 +26,5 @@ section {
   flex-direction: column;
 }
 
-body {
-  margin-bottom: 0;
-}
 
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-  /* .container {
-    width: 80%;
-    padding: 0;
-  }
-   {
-    width: 100%;
-  }
-}  */
 
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
-  /* .container {
-    width: 100%;
-  }
-} */
