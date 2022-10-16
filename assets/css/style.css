@@ -6,7 +6,9 @@
 
 figure {
     display: flex;
+   
     justify-content: center;
+
 }
 
 .hero 
@@ -14,8 +16,11 @@ figure {
     align-items: flex-start;
     display: flex;
     justify-content: space-evenly;
-    
 }
+
+/* .hero {
+  background-image: url("/assets/images/cosmopolitan-delish.jpg");
+} */
 
 section {
     display: flex;
