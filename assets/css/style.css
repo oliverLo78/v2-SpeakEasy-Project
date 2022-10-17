@@ -15,6 +15,11 @@ h1 {
   
 }
 
+
+.logo {
+  font-size: 80px;
+}
+
 .box {
   background-image: url(../../assets/Images/top-shelf-choices-fix.png);
   background-repeat: no-repeat;
