@@ -14,12 +14,10 @@
   <body>
 
     <!-- hero class of header  -->
-    <section class="hero  has-background-black">
+    <section class="hero">
       <div class="hero-body">
         <div class="container is-marginless heading">
-          <figure class="logo">
-            <img src="./assets/images/the speakeasy.png" alt="gold logo the speakeasy silhoutte"
-            style="max-width: 156px;">
+          <figure class="logo"> <h1>Speakeasy</h1> </figure>
           </figure>
         </div>
       </div>
@@ -31,28 +29,36 @@
           <div class="tile is-vertical is-8">
             <div class="tile">
               <div class="tile is-parent is-vertical">
-                <article class="tile is-child notification is-primary">
-                  <div class="field" style="width: 234px;">
-                    <label class="label is-size-4 has-text-centered">Cocktail</label>
+                <article class="tile is-child notification ">
+                  <div class="field" style="width: 350px;">
+                    <br>
+                    <br>
+                    <label class="label is-size-4 has-text-centered">Search for a Cocktail</label>
                     
                     <!-- Text input to search for a cocktail -->
                     <div class="control">
-                      <input id="userInput" class="input mb-4" type="text" placeholder="input cocktail">
+                      <input id="userInput" class="input mb-4 " type="text" placeholder="input cocktail">
                     </div>
 
                     <!-- Search button -->
                     <div class="control">
-                      <button class="button is-success mt-4" id="search" style="width: 234px;">Search</button>
+                      <button class="button is-primary mt-4 has-background-black has-text-centered ml-6 " id="search" style="width: 234px;">Search</button>
                     </div>
                   </div>  
                 </article>
-                <article class="tile is-child notification is-warning">
+                <article class="tile is-child notification is-dark">
                     <!-- image of the searched cocktail -->
+                  <h1 id="drinkName" class="title is-size-4 my-4 has-text-centered"></h1>
                   <figure id="drinkPhoto" class="image is-256x256">
                   </figure>
                   <!-- searched recipe -->
-                  <h1 id="drinkName" class="title is-size-4 my-4 has-text-centered"></h1>
+                  <br>
+                  <h2 class="drinktitle">Ingredients<h2>
+                    <br>
                   <div id="drinkIngr"></div>
+                  <br>
+                  <h2 class="drinktitle">Instructions</h2>
+                  <br>
                   <div id="drinkInst"></div> 
                 </article>
               </div>
@@ -75,45 +81,46 @@
   
   
           <div class="container">
-            <div class="box mb-2 has-background-grey-lighter">
+            <div class="box mb-2 has-background-black">
               <figure class="image is-48x48 ml-5">
-                <img src=".\assets\Images\martini glass.png">
+               <!-- <img src=".\assets\Images\martini glass.png"> -->
               </figure>
-              <h1 class="title has-text-centered mb-6">Today's Recommendations</h1>
+              <h1 class="title has-text-centered mb-6 has-text-white"> Recommendations</h1>
             </div>
             
             <div class="columns">
-              <div class="column is-one-third">
-                <div class="notification is-warning">
+              <div class="column is-one-third ">
+                <div class="notification is-dark">
                   <!-- <figure class="media-left"> -->
                     <!-- <span class="icon is-medium">
                           <i class="fa-solid fa-whiskey-glass-ice"></i>
                         </span> -->
                   <!-- </figure> -->
-                  <h1 class="title is-size-4 mb-4">Old Fashion</h1>
-                  Stinger chimayó cocktail lemon split brandy manhattan presbyterian, old rip van winkle calvert glenfarclas
-                  toro rojo. Smirnoff mai-tai long island iced tea. French 75 three wise men glengoyne, bacardi orgasm
-                  balvenie strathmill bunnahabhain el presidente, dailuaine house of lords mudslide blue blazer.Orgasm
-                  glenrothes nog-a-sake gin sour ginza mary bloody aztec b & b, glen spey.
+                  <h1 class="title is-size-4 mb-4 has-text-centered has-text-white">Old Fashioned</h1>
+                  <p>The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with an orange slice or zest and a cocktail cherry. 
+                    It is traditionally served with ice in an old fashioned glass (also known as a rocks glass), which predated the cocktail.</p>
+                  <br>
+                  <img class="oldfashioned" src="/assets/Images/old-fashioned.png">
                 </div>
               </div>
               <div class="column">
-                <div class="notification is-warning">
+                <div class="notification is-dark">
                   <h1 class="title is-size-4 mb-4 has-text-centered">Cosmopolitan</h1>
-                  Stinger chimayó cocktail lemon split brandy manhattan presbyterian, old rip van winkle calvert glenfarclas
-                  toro rojo. Smirnoff mai-tai long island iced tea. French 75 three wise men glengoyne, bacardi orgasm
-                  balvenie strathmill bunnahabhain el presidente, dailuaine house of lords mudslide blue blazer.Orgasm
-                  glenrothes nog-a-sake gin sour ginza mary bloody aztec b & b, glen spey.
+                  <p>A cosmopolitan is a cocktail made with vodka, Cointreau, cranberry juice, and lime juice.
+                    The cosmopolitan is a relative of cranberry coolers like the Cape Codder. Though often presented far differently, 
+                    the cosmopolitan also bears a likeness in composition to the kamikaze cocktail. </p>
+                  
+                  <br>
+                  <img class="drinks" src="/assets/Images/cosmo2.png">
                 </div>
               </div>
               <div class="column">
-                <div class="notification is-warning">
+                <div class="notification is-dark">
                   <h1 class="title is-size-4 mb-4 has-text-centered">Mojito</h1>
-                  Stinger chimayó cocktail lemon split brandy manhattan presbyterian, old rip van winkle calvert glenfarclas
-                  toro rojo. Smirnoff mai-tai long island iced tea. French 75 three wise men glengoyne, bacardi orgasm
-                  balvenie strathmill bunnahabhain el presidente, dailuaine house of lords mudslide blue blazer.Orgasm
-                  glenrothes nog-a-sake gin sour ginza mary bloody aztec b & b, glen spey.
-                  
+                  <p>Mojito is a traditional Cuban punch. The cocktail often consists of five ingredients: white rum, sugar, lime juice, soda water, and mint. Its combination of sweetness, citrus, and herbaceous mint flavors is intended to complement the rum, and has made the mojito a popular summer drink. </p>
+                  <br>
+                  <img class="mojito" src="/assets/Images/mojito.png">
+
                 </div>
               </div>
             </div>
