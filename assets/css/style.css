@@ -16,7 +16,7 @@ h1 {
 }
 
 .box {
-  background-image: url(/assets/Images/top\ shelf\ choices\ fix.png);
+  background-image: url(../../assets/Images/top-shelf-choices-fix.png);
   background-repeat: no-repeat;
   background-size:cover;
   height:max-content;
@@ -121,6 +121,7 @@ margin-top: 20px;
 
 @media only screen and (max-width:500px) { */
 /* For mobile phones: */
-.container {
+  .container {
   width: 100%;
+  }
 }
