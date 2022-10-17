@@ -84,6 +84,7 @@ margin-top: 20px;
 }
 
 
+
 .footer {
   color:white;
   
@@ -92,6 +93,12 @@ margin-top: 20px;
 .content {
   margin-left: 25%;
 }
+
+
+#anotherDrink {
+  display: none;
+}
+/* 
 
 @media only screen and (max-width:800px) { */
 /* For tablets: */

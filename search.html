@@ -30,21 +30,26 @@
             <div class="tile">
               <div class="tile is-parent is-vertical">
                 <article class="tile is-child notification ">
-                  <div class="field" style="width: 350px;">
+                  <div id="cocktailSearch" class="field" style="width: 350px;">
                     <br>
                     <br>
                     <label class="label is-size-4 has-text-centered">Search for a Cocktail</label>
-                    
-                    <!-- Text input to search for a cocktail -->
                     <div class="control">
                       <input id="userInput" class="input mb-4 " type="text" placeholder="input cocktail">
                     </div>
-
-                    <!-- Search button -->
                     <div class="control">
                       <button class="button is-primary mt-4 has-background-black has-text-centered ml-6 " id="search" style="width: 234px;">Search</button>
                     </div>
-                  </div>  
+                  </div>
+                  <!-- this button asks the user if they want another drink and reloads the page -->
+                  <!-- <div id="anotherDrink" class="field" style="width: 350px;">
+                    <br>
+                    <br>
+                    <label class="label is-size-4 has-text-centered">Ready for Another?</label>
+                    <div class="control">
+                      <button class="button is-primary mt-4 has-background-black has-text-centered ml-6 " id="reloadPage" style="width: 234px;">YES!</button>
+                    </div>
+                  </div>   -->
                 </article>
                 <article class="tile is-child notification is-dark">
                     <!-- image of the searched cocktail -->
