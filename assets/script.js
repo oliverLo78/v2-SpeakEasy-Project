@@ -14,6 +14,9 @@ var searchResultsVid3;
 
 $(document).ready(function(){
 
+
+
+    
 $('input').keyup(function(e){
     e.preventDefault();
     input = $('input#userInput').val();

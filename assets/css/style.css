@@ -55,7 +55,7 @@ p {
 section {
   display: flex;
   border: 0;
-  background-image: url(./assets/Images/The-Skylark-night-1200.png);
+  background-image: url(/assets/images/The-Skylark-night-1200.png);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -83,24 +83,37 @@ margin-inline: 50px;
 margin-top: 20px;
 }
 
+
+
+.footer {
+  color:white;
+  margin-bottom: ;
+  padding-bottom: 50px;
+  
+}
+
+.content {
+  margin-left: 25%;
+}
+
+
 #anotherDrink {
   display: none;
 }
 /* 
+
 @media only screen and (max-width:800px) { */
 /* For tablets: */
-/* .container {
+ .container {
   width: 80%;
   padding: 0;
 }
  {
   width: 100%;
-}
 }  */
 
-/* @media only screen and (max-width:500px) { */
+@media only screen and (max-width:500px) { */
 /* For mobile phones: */
-/* .container {
+.container {
   width: 100%;
 }
-} */
