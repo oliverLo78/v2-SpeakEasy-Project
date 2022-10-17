@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Speakeasy!</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+
+  <body>
+
+    <!-- hero class of header  -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-marginless heading">
+          <figure class="logo"> <h1>Speakeasy</h1> </figure>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="section">
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-8">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <article class="tile is-child notification ">
+                  <div class="field" style="width: 350px;">
+                    <br>
+                    <br>
+                    <label class="label is-size-4 has-text-centered">Search for a Cocktail</label>
+                    
+                    <!-- Text input to search for a cocktail -->
+                    <div class="control">
+                      <input id="userInput" class="input mb-4 " type="text" placeholder="input cocktail">
+                    </div>
+
+                    <!-- Search button -->
+                    <div class="control">
+                      <button class="button is-primary mt-4 has-background-black has-text-centered ml-6 " id="search" style="width: 234px;">Search</button>
+                    </div>
+                  </div>  
+                </article>
+                <article class="tile is-child notification is-dark">
+                    <!-- image of the searched cocktail -->
+                  <h1 id="drinkName" class="title is-size-4 my-4 has-text-centered"></h1>
+                  <figure id="drinkPhoto" class="image is-256x256">
+                  </figure>
+                  <!-- searched recipe -->
+                  <br>
+                  <h2 class="drinktitle">Ingredients<h2>
+                    <br>
+                  <div id="drinkIngr"></div>
+                  <br>
+                  <h2 class="drinktitle">Instructions</h2>
+                  <br>
+                  <div id="drinkInst"></div> 
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>    
+       
+        
+          
+          
+          <!-- <figure class="image is-4by5">
+            <img src="https://bulma.io/images/placeholders/256x256.png">
+          </figure>
+           -->
+          
+        <!-- </aside> -->
+        
+        <!-- <div class="container row"> -->
+          
+  
+  
+          <div class="container">
+            <div class="box mb-2 has-background-black">
+              <figure class="image is-48x48 ml-5">
+               <!-- <img src=".\assets\Images\martini glass.png"> -->
+              </figure>
+              <h1 class="title has-text-centered mb-6 has-text-white"> Recommendations</h1>
+            </div>
+            
+            <div class="columns">
+              <div class="column is-one-third ">
+                <div class="notification is-dark">
+                  <!-- <figure class="media-left"> -->
+                    <!-- <span class="icon is-medium">
+                          <i class="fa-solid fa-whiskey-glass-ice"></i>
+                        </span> -->
+                  <!-- </figure> -->
+                  <h1 class="title is-size-4 mb-4 has-text-centered has-text-white">Old Fashioned</h1>
+                  <p>The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with an orange slice or zest and a cocktail cherry. 
+                    It is traditionally served with ice in an old fashioned glass (also known as a rocks glass), which predated the cocktail.</p>
+                  <br>
+                  <img class="oldfashioned" src="/assets/Images/old-fashioned.png">
+                </div>
+              </div>
+              <div class="column">
+                <div class="notification is-dark">
+                  <h1 class="title is-size-4 mb-4 has-text-centered">Cosmopolitan</h1>
+                  <p>A cosmopolitan is a cocktail made with vodka, Cointreau, cranberry juice, and lime juice.
+                    The cosmopolitan is a relative of cranberry coolers like the Cape Codder. Though often presented far differently, 
+                    the cosmopolitan also bears a likeness in composition to the kamikaze cocktail. </p>
+                  
+                  <br>
+                  <img class="drinks" src="/assets/Images/cosmo2.png">
+                </div>
+              </div>
+              <div class="column">
+                <div class="notification is-dark">
+                  <h1 class="title is-size-4 mb-4 has-text-centered">Mojito</h1>
+                  <p>Mojito is a traditional Cuban punch. The cocktail often consists of five ingredients: white rum, sugar, lime juice, soda water, and mint. Its combination of sweetness, citrus, and herbaceous mint flavors is intended to complement the rum, and has made the mojito a popular summer drink. </p>
+                  <br>
+                  <img class="mojito" src="/assets/Images/mojito.png">
+
+                </div>
+              </div>
+            </div>
+          <div id="youTubeVid1" class="container-max-width-780px is-flex-direction-column">         </div>
+          
+        </div>
+        
+          <!-- <footer class="footer has-background-black"></footer> -->
+
+          <!-- need to decide if we are going to append here or new page -->
+      </section>
+    </main>
+    <footer class="footer has-background-black"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
