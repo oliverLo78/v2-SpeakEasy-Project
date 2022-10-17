@@ -42,12 +42,11 @@ p {
 }
 
 .hero-body {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   justify-content: space-evenly;
   background-color: rgba(0, 0, 0, 0.932);
- 
-  
+  flex-direction: column; 
 }
 
 section {
@@ -77,10 +76,14 @@ margin-bottom: 0;
 }
 
 .small-video {
-margin-inline: 50px;
-margin-top: 20px;
+  margin-inline: 50px;
+  margin-top: 20px;
 }
-/* 
+
+.material-symbols-outlined {
+  /* margin-left: 475px; */
+}
+
 @media only screen and (max-width:800px) { */
 /* For tablets: */
 /* .container {
