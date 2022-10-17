@@ -46,9 +46,7 @@ function storeDrink (){
         for (const input of iterator) {
         var x = document.createElement('button');
         var z = document.createTextNode(input);
-        x.setAttribute('class','has-text-centered');
-        x.setAttribute('class','ml-6');
-        x.setAttribute('style','width: 255px');
+        x.setAttribute('class','custom-button-class');
         x.appendChild(z);
         document.getElementById('cocktailSearch').append(x);
     }
