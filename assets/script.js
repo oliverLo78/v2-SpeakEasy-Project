@@ -70,6 +70,10 @@ function getDrink(requestDrink){
             var drinkInst = document.createElement('p');
             drinkInst.textContent = data.drinks[0].strInstructions;
             $('div#drinkInst').append(drinkInst);
+            var thumbNail = data.drinks[0].strDrinkThumb;
+            var drinkPhoto = document.createElement('img');
+            drinkPhoto.setAttribute('src',thumbNail);
+            $('figure#drinkPhoto').append(drinkPhoto);
             // }
         });
 }
@@ -80,15 +84,14 @@ function getVideo(requestVideo){
         return response.json();
         })
         .then(function(data){
-            for (var i = 0; i < data.items.length; i++) {
+            // for (var i = 0; i < data.items.length; i++) {
             // console.log(data.items);
-            searchResultsVid1 = data.items[0].id.videoId;
-            searchResultsVid2 = data.items[1].id.videoId;
-            searchResultsVid3 = data.items[2].id.videoId;
-            }
+        searchResultsVid1 = data.items[0].id.videoId;
+        // searchResultsVid2 = data.items[1].id.videoId;
+        // searchResultsVid3 = data.items[2].id.videoId;
         youTubeVid1 = youTubeRoot + searchResultsVid1;
-        youTubeVid2 = youTubeRoot + searchResultsVid2;
-        youTubeVid3 = youTubeRoot + searchResultsVid3;
+        // youTubeVid2 = youTubeRoot + searchResultsVid2;
+        // youTubeVid3 = youTubeRoot + searchResultsVid3;
         var a1 = document.createElement('iframe');
         a1.setAttribute('class','has-ratio');
         a1.setAttribute('width','640');
@@ -98,34 +101,33 @@ function getVideo(requestVideo){
         b1.setAttribute('class','image is-16by9');
         $(b1).append(a1);
         $('div#youTubeVid1').append(b1);
-        var a2 = document.createElement('iframe');
-        a2.setAttribute('class','has-ratio');
-        a2.setAttribute('width','340');
-        a2.setAttribute('height','180');
-        a2.setAttribute('src',youTubeVid2);
-        var b2 = document.createElement('figure');
-        b2.setAttribute('class','small-video');
-        b2.setAttribute('class','display is-inline');
-        b2.setAttribute('class','image is-13by4');
-        $(b2).append(a2);
-        $('div#youTubeVid1').append(b2);  
-        var a3 = document.createElement('iframe');
-        a3.setAttribute('class','has-ratio');
-        a3.setAttribute('width','340');
-        a3.setAttribute('height','180');
-        a3.setAttribute('src',youTubeVid3);
-        var b3 = document.createElement('figure');
-        b2.setAttribute('class','small-video');
-        b2.setAttribute('class','display is-inline');
-        b2.setAttribute('class','image is-13by4');
-        $(b3).append(a3);      
-        $('div#youTubeVid1').append(b3);        
-        });
+        // var a2 = document.createElement('iframe');
+        // a2.setAttribute('class','has-ratio');
+        // a2.setAttribute('width','340');
+        // a2.setAttribute('height','180');
+        // a2.setAttribute('src',youTubeVid2);
+        // var b2 = document.createElement('figure');
+        // b2.setAttribute('class','small-video');
+        // b2.setAttribute('class','display is-inline');
+        // b2.setAttribute('class','image is-13by4');
+        // $(b2).append(a2);
+        // $('div#youTubeVid1').append(b2);  
+        // var a3 = document.createElement('iframe');
+        // a3.setAttribute('class','has-ratio');
+        // a3.setAttribute('width','340');
+        // a3.setAttribute('height','180');
+        // a3.setAttribute('src',youTubeVid3);
+        // var b3 = document.createElement('figure');
+        // b2.setAttribute('class','small-video');
+        // b2.setAttribute('class','display is-inline');
+        // b2.setAttribute('class','image is-13by4');
+        // $(b3).append(a3);      
+        // $('div#youTubeVid1').append(b3);  
+        // }      
+    });
 }
 
-
 });
-
 // Create a div element to store API data
 // var favoriteEl = document.createElement('div');
 
@@ -184,4 +186,3 @@ function getVideo(requestVideo){
 // btnSearchEl.addEventListener("click", increment);
 // // Attach event listener to decrement button element
 // hideCardsEl.addEventListener("click", hideCardsEl);
-
