@@ -19,6 +19,11 @@ $('input').keyup(function(e){
     input = $('input#userInput').val();
 });
 
+// Reload page function
+// $('#reloadPage').click(function(){
+//     location.reload(true);
+// });
+
 $('#search').click(function drinkParams(){
     var paramsString = 's={drink name}';
     var searchParams = new URLSearchParams(paramsString);
@@ -27,6 +32,8 @@ $('#search').click(function drinkParams(){
     requestDrink = apiRootCocktailURL+x;
     console.log(requestDrink);
     getDrink(requestDrink);
+    // $('div#cocktailSearch').css('display','none');
+    // $('div#anotherDrink').css('display','block');
 });
 
 $('#search').click(function videoParams(){
