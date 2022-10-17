@@ -26,18 +26,7 @@ button {
 }
 
 
-.custom-button-class {
-    background-color: rgb(60, 60, 60);
-    border: 1px black solid;
-    color: white;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 3px;
-    width: 255px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
 
 
 .btn {
