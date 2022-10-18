@@ -1,17 +1,15 @@
+var youtubeApiKey = 'key=AIzaSyC5toGw1SSB32wE6uogT2Hk25_CWavryVo&'
 var recentDrinks = [];
 var drink;
 var input;
 var requestDrink;
 var apiRootCocktailURL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?';
 var requestVideo;
-var apiRootYouTubeURL = 'https://www.googleapis.com/youtube/v3/search?maxResults=3&safeSearch=moderate&videoEmbeddable=true&type=video&part=snippet&key=AIzaSyC5toGw1SSB32wE6uogT2Hk25_CWavryVo&';
+var apiRootYouTubeURL = 'https://www.googleapis.com/youtube/v3/search?maxResults=3&safeSearch=moderate&videoEmbeddable=true&type=video&part=snippet&';
 var youTubeVid1;
-var youTubeVid2;
-var youTubeVid3;
 var youTubeRoot = 'https://www.youtube.com/embed/';
 var searchResultsVid1;
-var searchResultsVid2;
-var searchResultsVid3;
+var searchAgain;
 
 $(document).ready(function(){
 
@@ -25,37 +23,60 @@ $('input').keyup(function(e){
     input = $('input#userInput').val();
 });
 
-// Reload page function
-// $('#reloadPage').click(function(){
-//     location.reload(true);
-// });
-
 function storeDrink (){
     var t = input.toUpperCase();
     recentDrinks.unshift(t);
     localStorage.setItem('drinks',JSON.stringify(recentDrinks));
 }
 
-    function init(){
-    if (recentDrinks = null) {
+function init(){
+    console.log(localStorage.getItem('drinks'));
+    if (localStorage.getItem('drinks') === null) {
         return;
     } else {
         recentDrinks = JSON.parse(localStorage.getItem('drinks'));
         var slice = recentDrinks.slice(0,3);
-        const iterator = slice.values();
+        // const iterator = slice.values();
         var d = document.createElement('p');
         var e = document.createTextNode('Recent Searches');
         d.append(e);
-        d.setAttribute('class','has-text-centered');
+        d.setAttribute('class','recent-searches');
         document.getElementById('cocktailSearch').append(d);
-        for (const input of iterator) {
-        var x = document.createElement('button');
-        var z = document.createTextNode(input);
-        x.setAttribute('class','custom-button-class');
-        x.appendChild(z);
-        document.getElementById('cocktailSearch').append(x);
+        console.log(slice);
+            for (i = 0; i < slice.length; i++){
+            let x = document.createElement('button');
+            x.innerHTML = slice[i];
+            x.setAttribute('id',slice[i]);
+            x.setAttribute('type','button');
+            x.setAttribute('class','custom-button-class');
+            x.addEventListener('click', function() {
+                searchRecentDrinks(x.innerHTML);
+                });
+            document.getElementById('cocktailSearch').append(x);
+        }
     }
 }
+
+function searchRecentDrinks(input){
+    document.getElementById("drinkPhoto").innerHTML = "";
+    document.getElementById("drinkName").innerHTML = "";
+    document.getElementById("drinkInst").innerHTML = "";
+    document.getElementById("drinkIngr").innerHTML = "";
+    document.getElementById("youTubeVid1").innerHTML = "";
+    var paramsString = 's={drink name}';
+    var searchParams = new URLSearchParams(paramsString);
+    searchParams.set('s', input);
+    var x = searchParams.toString();
+    requestDrink = apiRootCocktailURL+x;
+    console.log(requestDrink);
+    getDrink(requestDrink);
+    var paramsString = 'q={search term}';
+    var searchParams = new URLSearchParams(paramsString);
+    searchParams.set('q', 'recipe'+input);
+    var x = searchParams.toString();
+    requestVideo = apiRootYouTubeURL+youtubeApiKey+x;
+    console.log(requestVideo);
+    getVideo(requestVideo);
 }
 
 $('#search').click(function drinkParams(){
@@ -67,19 +88,17 @@ $('#search').click(function drinkParams(){
     console.log(requestDrink);
     getDrink(requestDrink);
     storeDrink();
-    // $('div#cocktailSearch').css('display','none');
-    // $('div#anotherDrink').css('display','block');
 });
 
-// $('#search').click(function videoParams(){
-//     var paramsString = 'q={search term}';
-//     var searchParams = new URLSearchParams(paramsString);
-//     searchParams.set('q', 'recipe'+input);
-//     var x = searchParams.toString();
-//     requestVideo = apiRootYouTubeURL+x;
-//     console.log(requestVideo);
-//     getVideo(requestVideo);
-// });
+$('#search').click(function videoParams(){
+    var paramsString = 'q={search term}';
+    var searchParams = new URLSearchParams(paramsString);
+    searchParams.set('q', 'recipe'+input);
+    var x = searchParams.toString();
+    requestVideo = apiRootYouTubeURL+youtubeApiKey+x;
+    console.log(requestVideo);
+    getVideo(requestVideo);
+});
 
 function getDrink(requestDrink){
     fetch(requestDrink)
