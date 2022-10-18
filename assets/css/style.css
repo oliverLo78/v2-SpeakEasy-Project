@@ -9,11 +9,20 @@ figure {
 
 h1 {
   font-size: 50px;
-  color:  
+}
+
+
+.title {
+  font-size: 50px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo {
+  font-size: 80px;
 }
 
 .box {
-  background-image: url(/assets/Images/top\ shelf\ choices\ fix.png);
+  background-image: url(../../assets/Images/top-shelf-choices-fix.png);
   background-repeat: no-repeat;
   background-size:cover;
   height:max-content;
@@ -55,6 +64,12 @@ p {
   flex-direction: column; 
 }
 
+.hero-foot {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
 section {
   display: flex;
   border: 0;
@@ -92,7 +107,6 @@ margin-bottom: 0;
 
 .footer {
   color:white;
-  margin-bottom: ;
   padding-bottom: 50px;
   
 }
@@ -105,20 +119,43 @@ margin-bottom: 0;
 #anotherDrink {
   display: none;
 }
+ 
+
+.custom-button-class {
+  background-color: rgb(60, 60, 60);
+  border: 1px black solid;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  width: 255px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 
-@media only screen and (max-width:800px) { 
+/* @media only screen and (max-width:800px) { */
 /* For tablets: */
- .container {
+ /* .container {
   width: 80%;
   padding: 0;
 }
- {
-  width: 100%;
-}  */
 
-@media only screen and (max-width:500px) { 
-/* For mobile phones: */
-.container {
+ .body {
   width: 100%;
+}  
+} */
+/* @media only screen and (max-width:500px) {
+
+  .container {
+  width: 100%;
+  }
+} */
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    font-size: 90%;
+  }
 }

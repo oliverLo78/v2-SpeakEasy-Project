@@ -1,3 +1,4 @@
+var recentDrinks = [];
 var drink;
 var input;
 var requestDrink;
@@ -13,9 +14,6 @@ var searchResultsVid2;
 var searchResultsVid3;
 
 $(document).ready(function(){
-
-
-
     
 $('input').keyup(function(e){
     e.preventDefault();
@@ -27,6 +25,34 @@ $('input').keyup(function(e){
 //     location.reload(true);
 // });
 
+function storeDrink (){
+    var t = input.toUpperCase();
+    recentDrinks.unshift(t);
+    localStorage.setItem('drinks',JSON.stringify(recentDrinks));
+}
+
+    function init(){
+    if (recentDrinks = null) {
+        return;
+    } else {
+        recentDrinks = JSON.parse(localStorage.getItem('drinks'));
+        var slice = recentDrinks.slice(0,3);
+        const iterator = slice.values();
+        var d = document.createElement('p');
+        var e = document.createTextNode('Recent Searches');
+        d.append(e);
+        d.setAttribute('class','has-text-centered');
+        document.getElementById('cocktailSearch').append(d);
+        for (const input of iterator) {
+        var x = document.createElement('button');
+        var z = document.createTextNode(input);
+        x.setAttribute('class','custom-button-class');
+        x.appendChild(z);
+        document.getElementById('cocktailSearch').append(x);
+    }
+}
+}
+
 $('#search').click(function drinkParams(){
     var paramsString = 's={drink name}';
     var searchParams = new URLSearchParams(paramsString);
@@ -35,19 +61,20 @@ $('#search').click(function drinkParams(){
     requestDrink = apiRootCocktailURL+x;
     console.log(requestDrink);
     getDrink(requestDrink);
+    storeDrink();
     // $('div#cocktailSearch').css('display','none');
     // $('div#anotherDrink').css('display','block');
 });
 
-$('#search').click(function videoParams(){
-    var paramsString = 'q={search term}';
-    var searchParams = new URLSearchParams(paramsString);
-    searchParams.set('q', 'recipe'+input);
-    var x = searchParams.toString();
-    requestVideo = apiRootYouTubeURL+x;
-    console.log(requestVideo);
-    getVideo(requestVideo);
-});
+// $('#search').click(function videoParams(){
+//     var paramsString = 'q={search term}';
+//     var searchParams = new URLSearchParams(paramsString);
+//     searchParams.set('q', 'recipe'+input);
+//     var x = searchParams.toString();
+//     requestVideo = apiRootYouTubeURL+x;
+//     console.log(requestVideo);
+//     getVideo(requestVideo);
+// });
 
 function getDrink(requestDrink){
     fetch(requestDrink)
@@ -55,7 +82,6 @@ function getDrink(requestDrink){
         return response.json()
         })
         .then(function(data){
-            // for (var i = 0; i < data.drinks.length; i++) {
             console.log(data.drinks);
             var drinkName = document.createElement('h1');
             drinkName.textContent = data.drinks[0].strDrink;
@@ -84,7 +110,6 @@ function getDrink(requestDrink){
             var drinkPhoto = document.createElement('img');
             drinkPhoto.setAttribute('src',thumbNail);
             $('figure#drinkPhoto').append(drinkPhoto);
-            // }
         });
 }
 
@@ -94,14 +119,8 @@ function getVideo(requestVideo){
         return response.json();
         })
         .then(function(data){
-            // for (var i = 0; i < data.items.length; i++) {
-            // console.log(data.items);
         searchResultsVid1 = data.items[0].id.videoId;
-        // searchResultsVid2 = data.items[1].id.videoId;
-        // searchResultsVid3 = data.items[2].id.videoId;
         youTubeVid1 = youTubeRoot + searchResultsVid1;
-        // youTubeVid2 = youTubeRoot + searchResultsVid2;
-        // youTubeVid3 = youTubeRoot + searchResultsVid3;
         var a1 = document.createElement('iframe');
         a1.setAttribute('class','has-ratio');
         a1.setAttribute('width','640');
@@ -110,33 +129,10 @@ function getVideo(requestVideo){
         var b1 = document.createElement('figure');
         b1.setAttribute('class','image is-16by9');
         $(b1).append(a1);
-        $('div#youTubeVid1').append(b1);
-        // var a2 = document.createElement('iframe');
-        // a2.setAttribute('class','has-ratio');
-        // a2.setAttribute('width','340');
-        // a2.setAttribute('height','180');
-        // a2.setAttribute('src',youTubeVid2);
-        // var b2 = document.createElement('figure');
-        // b2.setAttribute('class','small-video');
-        // b2.setAttribute('class','display is-inline');
-        // b2.setAttribute('class','image is-13by4');
-        // $(b2).append(a2);
-        // $('div#youTubeVid1').append(b2);  
-        // var a3 = document.createElement('iframe');
-        // a3.setAttribute('class','has-ratio');
-        // a3.setAttribute('width','340');
-        // a3.setAttribute('height','180');
-        // a3.setAttribute('src',youTubeVid3);
-        // var b3 = document.createElement('figure');
-        // b2.setAttribute('class','small-video');
-        // b2.setAttribute('class','display is-inline');
-        // b2.setAttribute('class','image is-13by4');
-        // $(b3).append(a3);      
-        // $('div#youTubeVid1').append(b3);  
-        // }      
+        $('div#youTubeVid1').append(b1);    
     });
 }
-
+init();
 });
 
 // ****************************** Handlers ***************************************************** //
