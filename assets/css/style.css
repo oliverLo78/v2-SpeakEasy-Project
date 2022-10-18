@@ -10,7 +10,7 @@ figure {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 50px; 
 }
 
 
@@ -63,8 +63,6 @@ p {
   display: flex;
   justify-content: space-evenly;
   background-color: rgba(0, 0, 0, 0.932);
- 
-  
 }
 
 section {
@@ -137,14 +135,18 @@ margin-top: 20px;
   padding: 0;
 }
 
+
+
+
  .body {
   width: 100%;
 }  
-}
+
 @media only screen and (max-width:500px) {
 
   .container {
   width: 100%;
   }
 }
+
 

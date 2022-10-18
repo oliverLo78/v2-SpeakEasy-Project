@@ -14,9 +14,14 @@ var searchResultsVid2;
 var searchResultsVid3;
 
 $(document).ready(function(){
-    
+
 $('input').keyup(function(e){
     e.preventDefault();
+    document.getElementById("drinkPhoto").innerHTML = "";
+    document.getElementById("drinkName").innerHTML = "";
+    document.getElementById("drinkInst").innerHTML = "";
+    document.getElementById("drinkIngr").innerHTML = "";
+    document.getElementById("youTubeVid1").innerHTML = "";
     input = $('input#userInput').val();
 });
 
@@ -134,6 +139,7 @@ function getVideo(requestVideo){
 }
 init();
 });
+
 
 // ****************************** Handlers ***************************************************** //
 // Select increment and decrement button elements
