@@ -79,6 +79,7 @@ section {
   background-repeat: no-repeat;
   background-size:cover;
   background-blend-mode:multiply;
+  flex-direction: column;
   
 }
 
