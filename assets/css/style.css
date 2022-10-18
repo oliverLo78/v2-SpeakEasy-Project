@@ -10,9 +10,7 @@ figure {
 }
 
 h1 {
-  font-size: 50px;
-  color: 
-  
+  font-size: 50px; 
 }
 
 p {
@@ -87,7 +85,6 @@ margin-top: 20px;
 
 .footer {
   color:white;
-  margin-bottom: ;
   padding-bottom: 50px;
   
 }
@@ -108,12 +105,13 @@ margin-top: 20px;
   width: 80%;
   padding: 0;
 }
- {
+ /* {
   width: 100%;
-}  */
+}  */ 
 
-@media only screen and (max-width:500px) { */
-/* For mobile phones: */
-.container {
+@media only screen and (max-width:500px) { 
+  /* For mobile phones: */
+  .container {
   width: 100%;
+  }
 }
