@@ -67,6 +67,7 @@ p {
 
 section {
   display: flex;
+  flex-wrap: wrap;
   border: 0;
   background-image: url(../../assets/Images/The-Skylark-night-1200.png);
   width: 100%;
