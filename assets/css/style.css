@@ -113,6 +113,17 @@ margin-top: 20px;
   display: none;
 }
  
+button.custom-button-class:hover {
+  background-color: #FA005F;
+  border: 1px solid #FA005F;
+}
+
+p.recent-searches {
+  color: rgb(60, 60, 60);
+  font-size: 1.25rem;
+  font-style: italic;
+  text-align: center;
+}
 
 .custom-button-class {
   background-color: rgb(60, 60, 60);
@@ -149,4 +160,5 @@ margin-top: 20px;
   }
 }
 
+}
 
