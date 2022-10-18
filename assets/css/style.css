@@ -8,7 +8,7 @@ figure {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 50px; 
 }
 
 
@@ -61,7 +61,6 @@ p {
   display: flex;
   justify-content: space-evenly;
   background-color: rgba(0, 0, 0, 0.932);
-  flex-direction: column; 
 }
 
 .hero-foot {
@@ -72,6 +71,7 @@ p {
 }
 section {
   display: flex;
+  flex-wrap: wrap;
   border: 0;
   background-image: url(../../assets/Images/The-Skylark-night-1200.png);
   width: 100%;
@@ -120,6 +120,17 @@ margin-bottom: 0;
   display: none;
 }
  
+button.custom-button-class:hover {
+  background-color: #FA005F;
+  border: 1px solid #FA005F;
+}
+
+p.recent-searches {
+  color: rgb(60, 60, 60);
+  font-size: 1.25rem;
+  font-style: italic;
+  text-align: center;
+}
 
 .custom-button-class {
   background-color: rgb(60, 60, 60);
@@ -142,20 +153,19 @@ margin-bottom: 0;
   padding: 0;
 }
 
+
+
+
  .body {
   width: 100%;
 }  
-} */
-/* @media only screen and (max-width:500px) {
+
+@media only screen and (max-width:500px) {
 
   .container {
   width: 100%;
   }
 } */
 
-/* Responsive */
-@media (max-width: 768px) {
-  :root {
-    font-size: 90%;
-  }
 }
+
