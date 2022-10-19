@@ -24,8 +24,10 @@ h1 {
 .box {
   background-image: url(../../assets/Images/top-shelf-choices-fix.png);
   background-repeat: no-repeat;
-  background-size:cover;
-  height:max-content;
+  background-size: cover;
+  height: max-content;
+  width: 440px;
+  margin-left: 160px;
 }
 
 p {
@@ -53,7 +55,7 @@ p {
 
 .hero {
   background-color: rgba(0, 0, 0, 0.205);
- 
+  width: 100%;
 }
 
 .hero-body {
@@ -69,12 +71,13 @@ p {
   justify-content: space-evenly;
   flex-direction: column;
 }
-section {
+
+.container {
   display: flex;
   flex-wrap: wrap;
   border: 0;
   background-image: url(../../assets/Images/The-Skylark-night-1200.png);
-  width: 100%;
+  width: 128%;
   height: 100%;
   background-repeat: no-repeat;
   background-size:cover;
@@ -85,7 +88,22 @@ section {
 
 .columns:not(.is-desktop) {
 display: flex;
-flex-direction: row;
+flex-direction: column;
+}
+
+.box {
+  padding-top: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    width: 440px;
+    margin-left: 450px;
+}
+
+.title {
+  color: #363636;
+  font-size: 2rem;
+  line-height: 1.125;
 }
 
 body {
