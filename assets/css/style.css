@@ -85,6 +85,7 @@ flex-direction: row;
 
 body {
 margin-bottom: 0;
+overflow-x: hidden;
 }
 
 .drinkIngr {
@@ -153,11 +154,21 @@ p.recent-searches {
   }
 }
 
+@media screen and (max-width: 801px) {
+  .hero.body {
+    width: auto;
+  }
+}
 
  .body {
   width: 100%;
 }  
 
+@media screen and (max-width: 475px) {
+  .logo{
+    font-size: 20px;
+  }
+}
 @media only screen and (max-width:500px) {
 
   .container {
