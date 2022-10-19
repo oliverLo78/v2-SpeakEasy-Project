@@ -13,6 +13,9 @@ h1 {
   font-size: 50px; 
 }
 
+.tile {
+  flex-grow: 0;
+}
 
 .title {
   font-size: 50px;
