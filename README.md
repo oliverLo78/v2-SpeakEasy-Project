@@ -17,11 +17,15 @@ Discover classic cocktails or get information on you favorite one. See their ing
 Type in the name of your favorite cocktail in the search bar and see the results. 
 
 
-// screenshot maybe?
-<br>
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+## Screenshots
+
+![Password Generator Webpage Screenshot](./assets/Images/Speakeasy-Screenshot-1.png)
+&nbsp;\
+&nbsp;\
+![Password Generator Webpage Screenshot](./assets/Images/Speakeasy-Screenshot-2.png)
+&nbsp;
+
+
 
 ## Credits:
 
@@ -34,7 +38,6 @@ Type in the name of your favorite cocktail in the search bar and see the results
 ## Third-party Assets
 
 - Cocktail API: https://www.thecocktaildb.com/
-<br>
 - Youtube:  https://www.youtube.com/
 - Github: https:
 
