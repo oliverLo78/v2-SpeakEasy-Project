@@ -159,3 +159,26 @@ function getVideo(requestVideo){
 init();
 });
 
+
+// ****************************** Handlers ***************************************************** //
+// Select increment and decrement button elements
+// var count = 0;
+// var btnSearchEl = document.querySelector("#increment");
+// var countEl = document.querySelector("#count");
+// // var hideCardsEl = document.querySelector("#hideCards");
+
+// // Updates count on page
+// function setCounterText() {
+//     countEl.textContent = count;
+// }
+
+// function increment(event) {
+//     console.log(event);
+//     //
+// }
+
+
+// // Attach event listener to increment button element
+// btnSearchEl.addEventListener("click", increment);
+// // Attach event listener to decrement button element
+// hideCardsEl.addEventListener("click", hideCardsEl);
