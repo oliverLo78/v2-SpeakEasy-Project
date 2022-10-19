@@ -147,7 +147,11 @@ p.recent-searches {
   padding: 0;
 }
 
-
+@media screen and (max-width: 1056px) {
+  #old {
+    display: none;
+  }
+}
 
 
  .body {
