@@ -18,6 +18,10 @@ Type in the name of your favorite cocktail in the search bar and see the results
 
 [Link to SpeakEasy](https://jkanvision.github.io/The-SpeakEasy-Project/)
 
+## Technologies 
+
+![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
 ## Screenshots
 
 ![Password Generator Webpage Screenshot](./assets/Images/Speakeasy-Screenshot-1.png)
