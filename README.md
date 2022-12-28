@@ -22,7 +22,7 @@ Type in the name of your favorite cocktail in the search bar and see the results
 
 ![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-![BULMA Badge](https://wikiki.github.io/images/made-with-bulma.png)
+![BULMA Badge](https://wikiki.github.io/images/made-with-bulma.png?style=for-the-badge&logo=bulma&logoColor=white)
 
 ## Screenshots
 
