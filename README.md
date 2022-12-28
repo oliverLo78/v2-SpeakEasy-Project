@@ -22,6 +22,20 @@ Type in the name of your favorite cocktail in the search bar and see the results
 
 ![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
+
+### Features:
+
+This application has the following features:
+User can search for a cocktail by entering the cocktail's name or by clicking on any of the three most popular in the home page
+The application displays the cocktail with ingredients and video 
+The application also displays a list of recommended cocktail for user who have not decided their cocktail
+For each searched cocktail, the application shows the ingredients, exact amount for each list item, a short description of the cocktail, google's YouTube API will provide a how to video for searched cocktail
+The application provides a feature for users to save their favourite cocktails/ in local storage so they can access it quickly later by clicking on favourites button
+ 
+User Story:
+
+As a user looking for a cocktail, I would like an application that allows me to see and cocktail recipes, as well as how to video on how to prepare your favorite cocktail. When I am on the homepage, I am presented with a list of cocktails in an easy-to-navigate area. When looking for potential cocktails to try at bar, I am presented with suggestions to help inform my decision.
+
 ## Screenshots
 
 ![Password Generator Webpage Screenshot](./assets/Images/Speakeasy-Screenshot-1.png)
