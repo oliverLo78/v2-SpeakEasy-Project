@@ -27,7 +27,7 @@ h1 {
   background-size: cover;
   height: max-content;
   width: 440px;
-  margin-left: 160px;
+  margin-left: 180px;
 }
 
 p {
@@ -77,7 +77,7 @@ p {
   flex-wrap: wrap;
   border: 0;
   background-image: url(../../assets/Images/The-Skylark-night-1200.png);
-  width: 128%;
+  width: fit-content;
   height: 100%;
   background-repeat: no-repeat;
   background-size:cover;
@@ -107,7 +107,8 @@ flex-direction: column;
 }
 
 body {
-margin-bottom: 0;
+  margin-bottom: 0;
+  overflow-x: hidden;
 }
 
 .drinkIngr {
@@ -172,9 +173,6 @@ p.recent-searches {
   padding: 0;
 }
 
-
-
-
  .body {
   width: 100%;
 }  
@@ -186,5 +184,13 @@ p.recent-searches {
   }
 } */
 
+
+@media only screen and (max-width: 475px) {
+  .logo {
+    font-size: 10px; 
+  }
+   .subtitle {
+
+  }
 }
 
