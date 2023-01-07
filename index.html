@@ -4,34 +4,69 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Speakeasy</title>
-    
     <script rel="stylesheet" href="/assets/Font/Aclonica-Regular.ttf"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/cover.css">
-    
-  </head>
+  </head>  
+
   <body>
-    <div class="heroine">
-        <div class="container2">
-            <h1>Speakeasy</h1>
-            <h2>Martini Coders</h2>
-            <h3>UCF Coding Bootcamp Group Project I</h3>
-            <br>
-            
-            <button class="button is-primary mt-4 has-background-white has-text-centered " id="search" style="width: 234px;"><a href="search.html">Enter</a></button>
-               
-                
-            </button>
+    <header>
+      <h1>Speakeasy</h1>
+        <h2>Martini Coders</h2>
+    </header>
+    
+    <main>
+      <section>
+        <article>
+          <h3>UCF Coding Bootcamp Project 1</h3>
+        <div>
+          <p>The phrase, 'Speakeasy' originates from a term that bartenders used where people needed to</p> 
+          <h3>“speak easy” (quietly)</h3>
+          <ul>
+            <li>when ordering at the bar in order to not draw attention</li> 
+            <li>to the prohibited act of buying alcohol</li>
+            <li>In order to gain access to these illicit bars</li> 
+            <li>a password, specific handshake or secret knock was required</li>
+          </ul>
         </div>
-
-        
-
-    </div>
-
-
-  
-  </body>
+        <form>
+          <h3>Add a Comment:</h3>
+            <p>
+              <label for="username">Name:</label>
+              <input class="text-input" id="username" type="text" placeholder="First Last" />
+            </p>
+            <p>
+              <label for="email">E-mail:</label>
+              <input class="text-input" id="email" type="text" placeholder="me@example.com" />
+            </p>
+            <p class="flex-row">
+              <label for="expertise">What kind of drink would you like:</label>
+              <select id="expertise">
+                <option>Beer</option>
+                <option>Wine</option>
+                <option selected>Cocktail</option>
+              </select>
+            </p>
+            <p>
+              <label for="comment">Comment:</label>
+              <textarea class="text-input" id="comment" placeholder="I like martini cocktails!"></textarea>
+            </p>
+            <p class="flex-row">
+              <input class="checkbox" id="agreement" type="checkbox" />
+              <label for="agreement">I agree to share my e-mail address with Speakeasy</label>
+            </p>
+            <p>
+              <button>Submit</button>
+            </p>
+            <p>
+              <button class="button is-primary mt-4 has-background-white has-text-centered " id="search" style="width: 234px;"><a href="search.html">Enter</a></button>
+              </button>
+            </p>
+          </form>
+        </article>
+      </section>       
+    </main>
 
 
   <footer class="footer has-background-black">
@@ -40,14 +75,16 @@
       <p>
         <br>
         <br>
-        <strong>Speakeasy</strong> by <a href="https://github.com/jkanvision/The-SpeakEasy-Project">Martini Coders</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        <strong>Speakeasy</strong> by 
+        <a href="https://github.com/jkanvision/The-SpeakEasy-Project">Martini Coders</a> 
+        .The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+        .The website content is licensed
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
       </p>
-    
     </div>
-</footer>
-
+  </footer>
+</body>
 
 
 
