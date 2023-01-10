@@ -61,20 +61,19 @@ body {
   
   header {
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 1%;
     background-color: #101111;
     color: #fff;
   }
-  
+
   h1 {
     font-size: 200%;
+    align-items: left;
   }
   
   h2 {
-    margin: 2% 1%;
-    font-size: 150%;
+    margin: 2% 5px;
+    font-size: 75%;
   }
   
   nav ul {
@@ -84,11 +83,10 @@ body {
   }
   
   nav a {
-    color: #b9C6ae;
+    color: white;
     font-weight: bold;
-    text-decoration: none;
   }
-  
+
   nav a:hover {
     color: #fff;
   }
@@ -100,8 +98,9 @@ body {
     margin: 2% auto;
   }
   
-  article {
-    border-bottom: 1px solid #d8a47f;
+  article div * {
+    padding: 20px;
+    border: 3px solid #e71f0d;
   }
   
   article p {
@@ -113,6 +112,12 @@ body {
     margin-left: 5%;
     font-size: 110%;
     list-style: circle;
+  }
+  
+/* Use :nth-child() to select every even list item */
+article ul li:nth-child(even) {
+    background-color: #d6cd21;
+    color: #13293d;
   }
   
   form {
