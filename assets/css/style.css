@@ -11,6 +11,9 @@ h1 {
   font-size: 50px; 
 }
 
+.tile {
+  flex-grow: 0;
+}
 
 .title {
   font-size: 50px;
@@ -317,8 +320,17 @@ body {
 
 
 
+@media screen and (max-width: 1056px) {
+  #old {
+    display: none;
+  }
+}
 
-
+@media screen and (max-width: 801px) {
+  .hero.body {
+    width: auto;
+  }
+}
 
 
 
@@ -346,6 +358,11 @@ body {
   width: 100%;
 }  
 
+@media screen and (max-width: 475px) {
+  .logo{
+    font-size: 20px;
+  }
+}
 @media only screen and (max-width:500px) {
 
   .container {
