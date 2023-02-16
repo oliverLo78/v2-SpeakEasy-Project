@@ -147,7 +147,7 @@ p.recent-searches {
   text-align: center;
 }
 
-.custom-button-class {
+.custom-button-class, .button {
   background-color: rgb(60, 60, 60);
   border: 1px black solid;
   color: white;
