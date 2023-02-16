@@ -1,8 +1,6 @@
-/* .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+.image.is-4by5 {
+    padding-top: 125%;
+}
 
 figure {
   display: flex;
@@ -29,8 +27,10 @@ h1 {
 .box {
   background-image: url(../../assets/Images/top-shelf-choices-fix.png);
   background-repeat: no-repeat;
-  background-size:cover;
-  height:max-content;
+  background-size: cover;
+  height: max-content;
+  width: 440px;
+  margin-left: 180px;
 }
 
 p {
@@ -58,37 +58,60 @@ p {
 
 .hero {
   background-color: rgba(0, 0, 0, 0.205);
- 
+  width: 100%;
 }
 
 .hero-body {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   justify-content: space-evenly;
   background-color: rgba(0, 0, 0, 0.932);
 }
 
-section {
+.hero-foot {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.container {
   display: flex;
   flex-wrap: wrap;
   border: 0;
   background-image: url(../../assets/Images/The-Skylark-night-1200.png);
-  width: 100%;
+  width: fit-content;
   height: 100%;
   background-repeat: no-repeat;
   background-size:cover;
   background-blend-mode:multiply;
+  flex-direction: column;
   
 }
 
 .columns:not(.is-desktop) {
 display: flex;
-flex-direction: row;
+flex-direction: column;
+}
+
+.box {
+  padding-top: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    width: 440px;
+    margin-left: 450px;
+}
+
+.title {
+  color: #363636;
+  font-size: 2rem;
+  line-height: 1.125;
 }
 
 body {
-margin-bottom: 0;
-overflow-x: hidden;
+  margin-bottom: 0;
+  overflow-x: hidden;
 }
 
 .drinkIngr {
@@ -97,11 +120,9 @@ overflow-x: hidden;
 }
 
 .small-video {
-margin-inline: 50px;
-margin-top: 20px;
+  margin-inline: 50px;
+  margin-top: 20px;
 }
-
-
 
 .footer {
   color:white;
@@ -112,7 +133,6 @@ margin-top: 20px;
 .content {
   margin-left: 25%;
 }
-
 
 #anotherDrink {
   display: none;
@@ -130,7 +150,7 @@ p.recent-searches {
   text-align: center;
 }
 
-.custom-button-class {
+.custom-button-class, .button {
   background-color: rgb(60, 60, 60);
   border: 1px black solid;
   color: white;
@@ -143,13 +163,162 @@ p.recent-searches {
   transform: translateX(-50%);
 }
 
-
-@media only screen and (max-width:800px) {
-/* For tablets: */
- .container {
-  width: 80%;
-  padding: 0;
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  --purp: radial-gradient( circle farthest-corner at 10% 20%,  rgba(64,84,178,1) 0%, rgba(219,2,234,1) 90% );
 }
+
+.grid {
+  display: grid;
+  --col1: 1fr;
+  --col2: 1fr;
+  --col3: 1fr;
+  --row1: 1fr;
+  --row2: 1fr;
+  --row3: 1fr;
+  grid-template-columns: var(--col1) var(--col2) var(--col3);
+  grid-template-rows: var(--row1) var(--row2) var(--row3);
+  height: 100vh;
+  transition: all .2s;
+  background-image: var(--purp);
+}
+
+.grid:has(.item:nth-child(3n+1):hover) {
+  --col1: 2fr;
+}
+
+.grid:has(.item:nth-child(3n+2):hover) {
+  --col2: 2fr;
+}
+
+.grid:has(.item:nth-child(3n+3):hover) {
+  --col3: 2fr;
+}
+.grid:has(.item:nth-child(n+1):nth-child(-n+3):where(:hover, :focus)) {
+  --row1: 2fr;
+}
+.grid:has(.item:nth-child(n+4):nth-child(-n+6):where(:hover, :focus)) {
+  --row2: 2fr;
+}
+
+.grid:has(.item:nth-child(n+7):nth-child(-n+9):hover) {
+  --row3: 3fr;
+}
+
+
+
+.item {
+  background-color: #eee;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  container: item / size;
+  transition: scale .2s;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.item p {
+  font-size: 15cqmin;
+  color: black;
+  font-weight: 900;
+  margin: 0;
+  padding: 5px;
+  position: relative;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.item p:before {
+  content: '';
+  display: block;
+  background: var(--purp);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  mix-blend-mode: color;
+}
+.item p.color {
+  font-size: 5cqw;
+  text-transform: uppercase;
+  letter-spacing: 0.2cqmin;
+}
+
+.item:where(:hover, :focus) {
+  color: white;
+  scale: 1.1;
+  z-index: 2;
+  border-radius: 20px;
+  box-shadow:0 0 50px 20px rgba(0, 0, 0, 0.5);
+  align-content: space-between;
+}
+.grid:has(.item:hover) .item:not(:hover) {
+  mix-blend-mode: luminosity;
+}
+
+
+.item:nth-child(1) {
+  background-image: url(../Images/Margarita_Popular_Classic_Cocktail_large.webp);
+  transform-origin: top left;
+}
+.item:nth-child(2) {
+  background-image: url(../Images/cosmo2.png);
+  transform-origin: top center;
+}
+.item:nth-child(3) {
+  background-image: url(../Images/Daiquiri_Summer_Cocktail_8a2a0474-bf6e-40db-80a5-e6e6d5a5a7e8_large.webp);
+  transform-origin: top right;
+}
+.item:nth-child(4) {
+  background-image: url(../Images/1393964772940.jpeg);
+  transform-origin: left center;
+}
+.item:nth-child(5) {
+  background-image: url(../Images/Manhattan_Popular_Classic_Cocktail_large.webp);
+  transform-origin: center center;
+}
+.item:nth-child(6) {
+  background-image: url(../Images/kingston-negroni-720x720-primary1-ef87562fea8240de92dd09c36457a8c2.jpg);
+  transform-origin: right center;
+}
+.item:nth-child(7) {
+  background-image: url(../Images/Old_Fashioned_Popular_Classic_Cocktail_large.webp);
+  transform-origin: bottom left;
+}
+.item:nth-child(8) {
+  background-image: url(../Images/sex-on-the-beach-featured-735x735.webp);
+  transform-origin: bottom center;
+}
+.item:nth-child(9) {
+  background-image: url(../Images/Pashionfruit_Martini_Popular_Classic_Cocktail_large.webp);
+  transform-origin: bottom right;
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1056px) {
   #old {
@@ -161,6 +330,28 @@ p.recent-searches {
   .hero.body {
     width: auto;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media only screen and (max-width:800px) { */
+/* For tablets: */
+ /* .container {
+  width: 80%;
+  padding: 0;
 }
 
  .body {
@@ -177,7 +368,15 @@ p.recent-searches {
   .container {
   width: 100%;
   }
-}
+} */
 
+
+@media only screen and (max-width: 475px) {
+  .logo {
+    font-size: 10px; 
+  }
+   .subtitle {
+
+  }
 }
 

@@ -7,31 +7,31 @@
     <title>Speakeasy</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
 
   <body>
-
     <!-- hero class of header  -->
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container is-marginless heading">
-          <figure class="logo has-text-white"> <h6>Speakeasy</h6> </figure>
+    <div class="container">
+    <section class="hero columns is-mobile">
+      <div class="hero-body column">
+        <div class="is-marginless heading">
+          <figure class="logo has-text-white"> <h6 class="speakeasy">Speakeasy</h6> </figure>
           </figure>
           <figure class="subtitle has-text-white"> <h2>The place to get information about any drink</h2> </figure>
           </figure>
-
+          </div>
         </div>
-      </div>
     </section>
 
-    <main>
-      <section class="section">
-        <div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
-            <div class="tile">
-              <div class="tile is-parent is-vertical">
+      <section class="container">
+        <div class="columns">
+          <div class="column is-vcentered">
+            <div class="tile is-size-5-mobile">
+              <div class="tile is-parent is-vertical is-size-5-mobile">
                 <article class="tile is-child notification ">
                   <div id="cocktailSearch" class="field" style="width: 350px;">
                     <br>
@@ -60,7 +60,7 @@
                     </div>
                   </div>   -->
                 </article>
-                <article class="tile is-child notification is-dark">
+                <article class="tile is-child notification is-dark is-mobile">
                     <!-- image of the searched cocktail -->
                   <h1 id="drinkName" class="title is-size-4 my-4 has-text-centered"></h1>
                   <figure id="drinkPhoto" class="image is-256x256">
@@ -94,22 +94,19 @@
           
   
   
-          <div class="container column" id="old">
-            <div class="box mb-2 has-background-black">
-              <figure class="image is-48x48 ml-5">
-               <!-- <img src=".\assets\Images\martini glass.png"> -->
+
+          <div class="container">
+            <div class="box mb-2 has-background-black columns is-3-desktop">
+              <figure class="image is-48x48 ml-5 column is-size-5-mobile">
               </figure>
               <h1 class="title has-text-centered mb-6 has-text-white"> Top Shelf Recommendations</h1>
             </div>
             
-            <div class="columns">
-              <div class="column is-one-third ">
+            <div class="container">
+            <div class="columns is-size-5-mobile is-one-third">
+              <div class="column is-size-5-mobile">
                 <div class="notification is-dark">
-                  <!-- <figure class="media-left"> -->
-                    <!-- <span class="icon is-medium">
-                          <i class="fa-solid fa-whiskey-glass-ice"></i>
-                        </span> -->
-                  <!-- </figure> -->
+          
                   <h1 class="title is-size-4 mb-4 has-text-centered has-text-white">Old Fashioned</h1>
                   <p>The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with an orange slice or zest and a cocktail cherry. 
                     It is traditionally served with ice in an old fashioned glass (also known as a rocks glass), which predated the cocktail.</p>
@@ -117,7 +114,7 @@
                   <img class="oldfashioned" src="./assets/Images/old-fashioned.png">
                 </div>
               </div>
-              <div class="column">
+              <div class="column is-mobile">
                 <div class="notification is-dark">
                   <h1 class="title is-size-4 mb-4 has-text-centered">Cosmopolitan</h1>
                   <p>A cosmopolitan is a cocktail made with vodka, Cointreau, cranberry juice, and lime juice.
@@ -128,7 +125,7 @@
                   <img class="drinks" src="./assets/Images/cosmo2.png">
                 </div>
               </div>
-              <div class="column">
+              <div class="column is-mobile">
                 <div class="notification is-dark">
                   <h1 class="title is-size-4 mb-4 has-text-centered">Mojito</h1>
                   <p>Mojito is a traditional Cuban punch. The cocktail often consists of five ingredients: white rum, sugar, lime juice, soda water, and mint. Its combination of sweetness, citrus, and herbaceous mint flavors is intended to complement the rum, and has made the mojito a popular summer drink. </p>
@@ -141,15 +138,15 @@
           <div id="youTubeVid1" class="container-max-width-780px is-flex-direction-column">         </div>
           
         </div>
-        
+      </div>
           <!-- <footer class="footer has-background-black"></footer> -->
 
           <!-- need to decide if we are going to append here or new page -->
       </section>
-    </main>
-    <footer class="footer has-background-black">
 
-        <div class="content has-text-centered ">
+    <!-- <footer class="footer has-background-black">
+
+        <div class="content has-text-centered is-mobile">
           <p>
             <strong>Speakeasy</strong> by <a href="https://github.com/jkanvision/The-SpeakEasy-Project">Martini Coders</a>. The source code is licensed
             <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
@@ -157,12 +154,76 @@
           </p>
         
         </div>
-    </footer>
+    </footer> -->
 
+    <!-- /.hero-body -->
+<main class="hero-foot center" style="padding: 2rem;">
+  <div id="grid" style="width: 768px;">
+    <div id="a" class="center-column">
+      <p class="has-text-centered has-text-white">
+        How about you enjoy a relaxing cocktail at speakeasy<br>
+        wonderful taste, presentation and kick. 
+      </p>
+    </div>
+    <div id="b" class="center-column">
+      <p class="title has-text-white">
+        <i class="icon from google has-text-white" 
+        style="width: 0.75em; height: 0.75em;"></i>
+        1.5<span class="is-size-5"> drinks to feel a buzz</span>
+      </p>
+      <p class="subtitle has-text-white is-7">0-3 DPH</p>
+    </div>
+    <div id="c" class="center-column" style="border-left: 1px solid gray">
+      <p class="title has-text-white"><span class="is-size-5">+</span>95<span
+        class="is-size-5">% alcohol by volume</span></p>
+      <p class="subtitle is-7 has-text-white">Top liquors in the world</p>
+    </div>
+    <div id="d" class="center-column" style="border-left: 1px solid gray;">
+    <p class="title has-text-white">3</span><span class="is-size-5"> Drinks Limit</span></p>
+    <p class="subtitle is-7 has-text-white">then your cut off</p>
+    </div>
+    <div id="e" class="center-column">
+      <a class="button is-danger is-inverted is-rounded is-outlined has-text-weight-bold"
+      style="width: 100%; margin: 10px; border: 0.15em solid whitesmoke;">
+      Order Now
+      </a>
+    </div>
 
+    <form>
+      <h3>Add a Comment:</h3>
+        <p>
+          <label for="username">Name:</label>
+          <input class="text-input" id="username" type="text" placeholder="First Last" />
+        </p>
+        <p>
+          <label for="email">E-mail:</label>
+          <input class="text-input" id="email" type="text" placeholder="me@example.com" />
+        </p>
+        <p class="flex-row">
+          <label for="expertise">What kind of drink would you like:</label>
+          <select id="expertise">
+            <option>Beer</option>
+            <option>Wine</option>
+            <option selected>Cocktail</option>
+          </select>
+        </p>
+        <p>
+          <label for="comment">Comment:</label>
+          <textarea class="text-input" id="comment" placeholder="I like martini cocktails!"></textarea>
+        </p>
+        <p class="flex-row">
+          <input class="checkbox" id="agreement" type="checkbox" />
+          <label for="agreement">I agree to share my e-mail address with Speakeasy</label>
+        </p>
+        <p>
+          <button>Submit</button>
+        </p>
+    
+      </form>
 
-    </footer>
-
+  </div>
+</main>
+<!-- /.hero-foot -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="./assets/script.js"></script>
   </body>
