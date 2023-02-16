@@ -188,6 +188,39 @@
       Order Now
       </a>
     </div>
+
+    <form>
+      <h3>Add a Comment:</h3>
+        <p>
+          <label for="username">Name:</label>
+          <input class="text-input" id="username" type="text" placeholder="First Last" />
+        </p>
+        <p>
+          <label for="email">E-mail:</label>
+          <input class="text-input" id="email" type="text" placeholder="me@example.com" />
+        </p>
+        <p class="flex-row">
+          <label for="expertise">What kind of drink would you like:</label>
+          <select id="expertise">
+            <option>Beer</option>
+            <option>Wine</option>
+            <option selected>Cocktail</option>
+          </select>
+        </p>
+        <p>
+          <label for="comment">Comment:</label>
+          <textarea class="text-input" id="comment" placeholder="I like martini cocktails!"></textarea>
+        </p>
+        <p class="flex-row">
+          <input class="checkbox" id="agreement" type="checkbox" />
+          <label for="agreement">I agree to share my e-mail address with Speakeasy</label>
+        </p>
+        <p>
+          <button>Submit</button>
+        </p>
+    
+      </form>
+
   </div>
 </main>
 <!-- /.hero-foot -->
