@@ -272,27 +272,27 @@ html {
   transform-origin: top right;
 }
 .item:nth-child(4) {
-  background-image: url(./shoes/airmax-leopard.webp);
+  background-image: url(../Images/1393964772940.jpeg);
   transform-origin: left center;
 }
 .item:nth-child(5) {
-  background-image: url(./shoes/airmax-wheat-gold.jpg);
+  background-image: url(../Images/Manhattan_Popular_Classic_Cocktail_large.webp);
   transform-origin: center center;
 }
 .item:nth-child(6) {
-  background-image: url(./shoes/flyknit-zebra.jpg);
+  background-image: url(../Images/kingston-negroni-720x720-primary1-ef87562fea8240de92dd09c36457a8c2.jpg);
   transform-origin: right center;
 }
 .item:nth-child(7) {
-  background-image: url(./shoes/Nike-Air-Max-270-React-Camo-Black-On-Foot-Side_w900.jpg);
+  background-image: url(../Images/Old_Fashioned_Popular_Classic_Cocktail_large.webp);
   transform-origin: bottom left;
 }
 .item:nth-child(8) {
-  background-image: url(./shoes/airamax 90 galaxy.webp);
+  background-image: url(../Images/sex-on-the-beach-featured-735x735.webp);
   transform-origin: bottom center;
 }
 .item:nth-child(9) {
-  background-image: url(./shoes/270-black-gold.png);
+  background-image: url(../Images/Pashionfruit_Martini_Popular_Classic_Cocktail_large.webp);
   transform-origin: bottom right;
 }
 
