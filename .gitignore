@@ -104,3 +104,39 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Excluded untracked files
+../01-portfolio/
+../01-refactor/
+../09-nodejs/
+../10-oop-team-profile-gen/
+../20-portfolio/
+../Bootcamp-README-Template/
+../HW-03/
+../HW-05/
+../HW-06/
+../HW-09/
+../Homework/
+../Jubilee/
+../Local/
+../Rose-to-Rough/
+../Rose2Rough-2.0/
+../UCF-VIRT-FSF-FT-09-2022-U-LOLC/
+../Wedding-Planner/
+../book-friends-app/
+../expressjs-note-taker/
+../mern-book-search/
+../mini-project-03/
+../mini-project-04/
+../mini-project-05/
+../model-view-controller-blog/
+../nani-hairstyle-tracker/
+../nosql-social-network-api/
+../oop-team-profile-generator/
+../orm-e-commerce-back-end/
+../portfolio-generator/
+../react-portfolio-2.0/
+../redux-store/
+../regex tutorial/
+../spotify-clone/
+../sql-employee-tracker/

@@ -143,6 +143,15 @@ button.custom-button-class:hover {
   border: 1px solid #FA005F;
 }
 
+/**centering search button**/
+.field.has-addons {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
 p.recent-searches {
   color: rgb(60, 60, 60);
   font-size: 1.25rem;

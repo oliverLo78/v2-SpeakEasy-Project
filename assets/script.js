@@ -63,13 +63,16 @@ function searchRecentDrinks(input){
     document.getElementById("drinkInst").innerHTML = "";
     document.getElementById("drinkIngr").innerHTML = "";
     document.getElementById("youTubeVid1").innerHTML = "";
+
     var paramsString = 's={drink name}';
     var searchParams = new URLSearchParams(paramsString);
     searchParams.set('s', input);
     var x = searchParams.toString();
+
     requestDrink = apiRootCocktailURL+x;
     console.log(requestDrink);
     getDrink(requestDrink);
+    
     var paramsString = 'q={search term}';
     var searchParams = new URLSearchParams(paramsString);
     searchParams.set('q', 'recipe'+input);
