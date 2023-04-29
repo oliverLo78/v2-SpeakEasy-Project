@@ -136,6 +136,7 @@ body {
 button.custom-button-class:hover {
   background-color: #FA005F;
   border: 1px solid #FA005F;
+  
 }
 
 /**centering search button**/
@@ -164,7 +165,7 @@ p.recent-searches {
   width: 255px;
   position: relative;
   left: 50%;
-  transform: translateX(-70%);
+  transform: translateX(-60%);
 }
 
 html {
