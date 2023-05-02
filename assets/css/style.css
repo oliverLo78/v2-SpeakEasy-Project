@@ -5,6 +5,7 @@
 figure {
   display: flex;
   justify-content: center;
+  background-color: black;
 }
 
 h1 {
@@ -21,6 +22,7 @@ h1 {
 }
 
 .logo {
+  background-color: black;
   font-size: 80px;
 }
 
@@ -56,10 +58,10 @@ p {
   margin-left: 40px;
 }
 
-.hero {
+/* .hero {
   background-color: rgba(0, 0, 0, 0.205);
   width: 100%;
-}
+} */
 
 .hero-body {
   align-items: center;
@@ -73,9 +75,10 @@ p {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  background-color: black;
 }
 
-.container {
+.container .section {
   display: flex;
   flex-wrap: wrap;
   border: 0;
@@ -84,12 +87,10 @@ p {
   height: 100%;
   background-repeat: no-repeat;
   background-size:cover;
-  background-blend-mode:multiply;
-  flex-direction: column;
-  
+  flex-direction: column;  
 }
 
-.columns:not(.is-desktop) {
+.column:not(.is-desktop) {
 display: flex;
 flex-direction: column;
 }
@@ -124,12 +125,6 @@ body {
   margin-top: 20px;
 }
 
-.footer {
-  color:white;
-  padding-bottom: 50px;
-  
-}
-
 .content {
   margin-left: 25%;
 }
@@ -141,6 +136,7 @@ body {
 button.custom-button-class:hover {
   background-color: #FA005F;
   border: 1px solid #FA005F;
+  
 }
 
 /**centering search button**/
@@ -169,7 +165,7 @@ p.recent-searches {
   width: 255px;
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-60%);
 }
 
 html {
@@ -214,8 +210,6 @@ html {
 .grid:has(.item:nth-child(n+7):nth-child(-n+9):hover) {
   --row3: 3fr;
 }
-
-
 
 .item {
   background-color: #eee;
@@ -266,6 +260,7 @@ html {
   box-shadow:0 0 50px 20px rgba(0, 0, 0, 0.5);
   align-content: space-between;
 }
+
 .grid:has(.item:hover) .item:not(:hover) {
   mix-blend-mode: luminosity;
 }
