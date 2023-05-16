@@ -265,7 +265,6 @@ html {
   mix-blend-mode: luminosity;
 }
 
-
 .item:nth-child(1) {
   background-image: url(../Images/Margarita_Popular_Classic_Cocktail_large.webp);
   transform-origin: top left;
