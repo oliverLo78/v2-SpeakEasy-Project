@@ -1,30 +1,3 @@
-/* body {
-    margin: 0;
-    background-color: black;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-h1 {
-    font-size: 100px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 30px;
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-    font-size: ;
-}
-
-
-button {
-    margin-left: 350px;
-  
-} */
-
 .btn {
     display: inline-block;
     position:absolute;
@@ -33,7 +6,7 @@ button {
     font-size: 40px;
     border-radius: 10px;
 }
-
+/* 
 .heroine {
    
     background-image: url("../../assets/Images/Secret-Entrance-Within-The-Blue-Room-Los-Angeles-1200x800\ \(1\).jpg");
@@ -41,7 +14,7 @@ button {
     background-repeat: no-repeat;
     background-size:cover;
     background-blend-mode: luminosity;
-}
+} */
 
 /* .container2 {
     max-width: 960px;
@@ -62,11 +35,14 @@ body {
     padding: 1%;
     background-color: #101111;
     color: #fff;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   h1 {
-    font-size: 200%;
-    align-items: left;
+    font-size: 100%;
+    text-align: center;
+    justify-content: space;
   }
   
   h2 {
@@ -78,6 +54,7 @@ body {
     display: flex;
     justify-content: space-between;
     min-width: 300px;
+    align-items: end;
   }
   
   nav a {
