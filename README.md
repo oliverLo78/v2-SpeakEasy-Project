@@ -16,7 +16,7 @@ Discover classic cocktails or get information on you favorite one. See their ing
 
 Type in the name of your favorite cocktail in the search bar and see the results.
 
-[Link to SpeakEasy](https://jkanvision.github.io/The-SpeakEasy-Project/)
+[Link to SpeakEasy](https://oliverlo78.github.io/v2-SpeakEasy-Project/)
 
 ## Technologies 
 
