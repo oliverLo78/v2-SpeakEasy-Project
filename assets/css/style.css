@@ -270,19 +270,19 @@ html {
   transform-origin: top left;
 }
 .item:nth-child(2) {
-  background-image: url(../Images/cosmo2.png);
+  background-image: url(../Images/Cosmopolitan-Drink.jpg);
   transform-origin: top center;
 }
 .item:nth-child(3) {
-  background-image: url(../Images/Daiquiri_Summer_Cocktail_8a2a0474-bf6e-40db-80a5-e6e6d5a5a7e8_large.webp);
+  background-image: url(../Images/mojito.png);
   transform-origin: top right;
 }
 .item:nth-child(4) {
-  background-image: url(../Images/1393964772940.jpeg);
+  background-image: url(../Images/Old_Fashioned_Popular_Classic_Cocktail_large.webp);
   transform-origin: left center;
 }
 .item:nth-child(5) {
-  background-image: url(../Images/Manhattan_Popular_Classic_Cocktail_large.webp);
+  background-image: url(../Images/manhattan-4000x4000-primary-ig-9c3d894510284e9d8fbd9c518d00790b.webp);
   transform-origin: center center;
 }
 .item:nth-child(6) {
@@ -290,15 +290,15 @@ html {
   transform-origin: right center;
 }
 .item:nth-child(7) {
-  background-image: url(../Images/Old_Fashioned_Popular_Classic_Cocktail_large.webp);
+  background-image: url(../Images/Daiquiri_Summer_Cocktail_8a2a0474-bf6e-40db-80a5-e6e6d5a5a7e8_large.webp);
   transform-origin: bottom left;
 }
 .item:nth-child(8) {
-  background-image: url(../Images/sex-on-the-beach-featured-735x735.webp);
+  background-image: url(../Images/whiskey-sour-cocktail-720x720.jpg);
   transform-origin: bottom center;
 }
 .item:nth-child(9) {
-  background-image: url(../Images/Pashionfruit_Martini_Popular_Classic_Cocktail_large.webp);
+  background-image: url(../Images/__opt__aboutcom__coeus__resources__content_migration__liquor__2019__02__13090826__pina-colada-720x720-recipe-253f1752769447f6998afd2b9469c24e.webp);
   transform-origin: bottom right;
 }
 
