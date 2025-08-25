@@ -58,11 +58,6 @@ p {
   margin-left: 40px;
 }
 
-/* .hero {
-  background-color: rgba(0, 0, 0, 0.205);
-  width: 100%;
-} */
-
 .hero-body {
   align-items: center;
   display: flex;
@@ -302,25 +297,12 @@ html {
   transform-origin: bottom right;
 }
 
-
 *, *:before, *:after {
   box-sizing: border-box;
 }
 body {
   margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media screen and (max-width: 1056px) {
@@ -334,45 +316,6 @@ body {
     width: auto;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media only screen and (max-width:800px) { */
-/* For tablets: */
- /* .container {
-  width: 80%;
-  padding: 0;
-}
-
- .body {
-  width: 100%;
-}  
-
-@media screen and (max-width: 475px) {
-  .logo{
-    font-size: 20px;
-  }
-}
-@media only screen and (max-width:500px) {
-
-  .container {
-  width: 100%;
-  }
-} */
-
 
 @media only screen and (max-width: 475px) {
   .logo {
