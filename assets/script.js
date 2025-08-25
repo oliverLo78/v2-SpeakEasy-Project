@@ -3,23 +3,45 @@ const COCKTAIL_API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php
 const YOUTUBE_API_KEY = 'AIzaSyALVeo-GPPH2Qiw0MJbnfqwwjmFzHCLu1I';
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search';
 
-$(document).ready(function(){
+// DOM Elements
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+const resultsSection = document.getElementById('resultsSection');
+const drinkName = document.getElementById('drinkName');
+const drinkImg = document.getElementById('drinkImg');
+const drinkIngredients = document.getElementById('drinkIngredients');
+const drinkInstructions = document.getElementById('drinkInstructions');
+const youtubeResults = document.getElementById('youtubeResults');
+const commentForm = document.getElementById('commentForm');
+const recentSearches = document.getElementById('recentSearches');
+const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('modalTitle');
+const modalMessage = document.getElementById('modalMessage');
+const closeModal = document.querySelector('.close');
 
-$('input').keyup(function(e){
-    e.preventDefault();
-    document.getElementById("drinkPhoto").innerHTML = "";
-    document.getElementById("drinkName").innerHTML = "";
-    document.getElementById("drinkInst").innerHTML = "";
-    document.getElementById("drinkIngr").innerHTML = "";
-    document.getElementById("youTubeVid1").innerHTML = "";
-    input = $('input#userInput').val();
+// Global variables
+let recentDrinks = JSON.parse(localStorage.getItem('recentDrinks')) || [];
+
+// Event Listeners
+searchBtn.addEventListener('click', handleSearch);
+searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleSearch();
+});
+commentForm.addEventListener('submit', handleCommentSubmit);
+closeModal.addEventListener('click', () => modal.style.display = 'none');
+window.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
 });
 
-function storeDrink (){
-    var t = input.toUpperCase();
-    recentDrinks.unshift(t);
-    localStorage.setItem('drinks',JSON.stringify(recentDrinks));
-}
+// Add event listeners to recommendation cards
+document.querySelectorAll('.recommendation').forEach(card => {
+    card.addEventListener('click', () => {
+         searchInput.value = card.getAttribute('data-drink');
+            handleSearch();
+    });
+});
+        
+
 
 function init(){
     console.log(localStorage.getItem('drinks'));
