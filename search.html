@@ -359,94 +359,26 @@
         </div>
     </section>
     
-          
-          <form>
-            <h3>Add a Comment:</h3>
-              <p>
-                <label for="username">Name:</label>
-                <input class="text-input" id="username" type="text" placeholder="First Last" />
-              </p>
-              <p>
-                <label for="email">E-mail:</label>
-                <input class="text-input" id="email" type="text" placeholder="me@example.com" />
-              </p>
-              <p class="flex-row">
-                <label for="expertise">What kind of drink would you like:</label>
-                <select id="expertise">
-                  <option>Beer</option>
-                  <option>Wine</option>
-                  <option selected>Cocktail</option>
-                </select>
-              </p>
-              <p>
-                <label for="comment">Comment:</label>
-                <textarea class="text-input" id="comment" placeholder="I like martini cocktails!"></textarea>
-              </p>
-              <p class="flex-row">
-                <input class="checkbox" id="agreement" type="checkbox" />
-                <label for="agreement">I agree to share my e-mail address with Speakeasy</label>
-              </p>
-              <p>
-                <button>Submit</button>
-              </p>
-            </form>
-      
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong class="has-text-light">Speakeasy</strong> by 
+                <a href="https://github.com/jkanvision/The-SpeakEasy-Project" class="has-text-danger">Martini Coders</a>. 
+                The source code is licensed <a href="http://opensource.org/licenses/mit-license.php" class="has-text-danger">MIT</a>.
+            </p>
         </div>
-      </div>
-          <!-- <footer class="footer has-background-black"></footer> -->
-
-          <!-- need to decide if we are going to append here or new page -->
-      </section>
-
-    <!-- <footer class="footer has-background-black">
-
-        <div class="content has-text-centered is-mobile">
-          <p>
-            <strong>Speakeasy</strong> by <a href="https://github.com/jkanvision/The-SpeakEasy-Project">Martini Coders</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-          </p>
+    </footer>
+    
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle" class="title is-4 has-text-light"></h2>
+            <p id="modalMessage" class="has-text-light"></p>
+        </div>
+    </div>
         
-        </div>
-    </footer> -->
-
-  <!-- /.hero-body -->
-  <footer class="footer">
-  <div class="container">
-  <main class="hero-foot" style="padding: 1.5rem;">
-    <div id="grid" style="width: 768px;">
-      <div id="a" class="center-column">
-        <p class="has-text-centered has-text-white">
-          How about you enjoy a relaxing cocktail at speakeasy<br>
-          wonderful taste, presentation and kick. 
-        </p>
-      </div>
-      <div id="b" class="center-column">
-        <p class="title has-text-white">
-          <i class="icon from google has-text-white" 
-          style="width: 0.75em; height: 0.75em;"></i>
-          1.5<span class="is-size-5"> drinks to feel a buzz</span>
-        </p>
-        <p class="subtitle has-text-white is-7">0-3 DPH</p>
-      </div>
-      <div id="c" class="center-column" style="border-left: 1px solid gray">
-        <p class="title has-text-white"><span class="is-size-5">+</span>95<span
-          class="is-size-5">% alcohol by volume</span></p>
-        <p class="subtitle is-7 has-text-white">Top liquors in the world</p>
-      </div>
-      <div id="d" class="center-column" style="border-left: 1px solid gray;">
-      <p class="title has-text-white">3</span><span class="is-size-5"> Drinks Limit</span></p>
-      <p class="subtitle is-7 has-text-white">then your cut off</p>
-      </div>
-      <div id="e" class="center-column">
-        <a class="button is-danger is-inverted is-rounded is-outlined has-text-weight-bold"
-        style="width: 100%; margin: 10px; border: 0.15em solid whitesmoke;">
-        Order Now
-        </a>
-      </div>
-    </main>
-  </footer>
-  <!-- /.hero-foot -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="./assets/script.js"></script>
   </body>
