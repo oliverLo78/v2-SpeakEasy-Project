@@ -300,7 +300,65 @@
                 </div>
             </div>
 
-      
+            <!-- Comment Form -->
+            <div class="card mt-6">
+                <div class="card-content">
+                    <h2 class="title is-4 has-text-light">Share Your Thoughts</h2>
+                    <form id="commentForm">
+                        <div class="field">
+                            <label class="label has-text-light">Name</label>
+                            <div class="control">
+                                <input id="username" class="input" type="text" placeholder="Your name">
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label has-text-light">Email</label>
+                            <div class="control">
+                                <input id="email" class="input" type="email" placeholder="Your email">
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label has-text-light">Drink Preference</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select id="drinkType">
+                                        <option value="cocktail">Cocktail</option>
+                                        <option value="beer">Beer</option>
+                                        <option value="wine">Wine</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label class="label has-text-light">Comment</label>
+                            <div class="control">
+                                <textarea id="comment" class="textarea" placeholder="Your comments..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox has-text-light">
+                                    <input type="checkbox" id="agreement">
+                                    I agree to share my email with Speakeasy
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" class="button">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
           
           <form>
             <h3>Add a Comment:</h3>
