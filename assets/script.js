@@ -41,35 +41,8 @@ document.querySelectorAll('.recommendation').forEach(card => {
     });
 });
         
-
-
-function init(){
-    console.log(localStorage.getItem('drinks'));
-    if (localStorage.getItem('drinks') === null) {
-        return;
-    } else {
-        recentDrinks = JSON.parse(localStorage.getItem('drinks'));
-        var slice = recentDrinks.slice(0,3);
-        // const iterator = slice.values();
-        var d = document.createElement('p');
-        var e = document.createTextNode('Recent Searches');
-        d.append(e);
-        d.setAttribute('class','recent-searches');
-        document.getElementById('cocktailSearch').append(d);
-        console.log(slice);
-            for (i = 0; i < slice.length; i++){
-            let x = document.createElement('button');
-            x.innerHTML = slice[i];
-            x.setAttribute('id',slice[i]);
-            x.setAttribute('type','button');
-            x.setAttribute('class','custom-button-class');
-            x.addEventListener('click', function() {
-                searchRecentDrinks(x.innerHTML);
-                });
-            document.getElementById('cocktailSearch').append(x);
-        }
-    }
-}
+// Initialize recent searches
+updateRecentSearches();
 
 function searchRecentDrinks(input){
     document.getElementById("drinkPhoto").innerHTML = "";
