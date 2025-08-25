@@ -169,145 +169,138 @@
             }
         }
     </style>
-            
   </head>
-
-  <body>
-    <!-- Navigation  -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <i class="fa-solid fa-martini-glass-citrus fa-2x" style="color: #e94560;"></i>
-                    <span class="logo-text ml-2">Speakeasy</span>
-                </a>
+<body>
+  <!-- Navigation  -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+          <div class="navbar-brand">
+              <a class="navbar-item" href="#">
+                  <i class="fa-solid fa-martini-glass-citrus fa-2x" style="color: #e94560;"></i>
+                  <span class="logo-text ml-2">Speakeasy</span>
+              </a>
                 
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-end">
-                    <a class="navbar-item" href="index.html">Home</a>
-                    <a class="navbar-item" href="about.html">About</a>
-                    <a class="navbar-item" href="#">Contact</a>
-                    <a class="navbar-item is-active" href="search.html">Search</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-    
-      <section class="section">
-        <div class="container">
-          <div class="column is-vcentered">
-            <div class="tile is-size-5-mobile">
-              <div class="tile is-parent is-vertical is-size-5-mobile">
-                <article class="tile is-child notification ">
-                  <div id="cocktailSearch" class="field" style="width: 350px;">
-                    <br>
-                    
-                    <div class="button is-size-5 mt-4 has-background-black has-text-centered ml-5" style="width: 250px;">
-                    <label class="label is-size-4 has-text-centered has-text-white">Get a Drink</label>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="field has-addons" id="search">
-                      <div class="control">
-                        <input class="input is-normal" type="text" placeholder="What'll You Have?">
-                        <a class="button is-primary has-background-danger has-text-centered" id="search">Search</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- this button asks the user if they want another drink and reloads the page -->
-                  <!-- <div id="anotherDrink" class="field" style="width: 350px;">
-                    <br>
-                    <br>
-                    <label class="label is-size-4 has-text-centered">Ready for Another?</label>
-                    <div class="control">
-                      <button class="button is-primary mt-4 has-background-black has-text-centered ml-6 " id="reloadPage" style="width: 234px;">YES!</button>
-                    </div>
-                  </div>   -->
-                </article>
-                <article class="tile is-child notification is-dark is-mobile">
-                    <!-- image of the searched cocktail -->
-                  <h1 id="drinkName" class="title is-size-4 my-4 has-text-centered"></h1>
-                  <figure id="drinkPhoto" class="image is-256x256">
-                  </figure>
-                  <!-- searched recipe -->
-                  <br>
-                  <h2 class="drinktitle">Ingredients<h2>
-                    <br>
-                  <div id="drinkIngr"></div>
-                  <br>
-                  <h2 class="drinktitle">Instructions</h2>
-                  <br>
-                  <div id="drinkInst"></div> 
-                </article>
-              </div>
-            </div>
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+              </a>
           </div>
-        </div>    
-       
-        
-          
-          
-          <!-- <figure class="image is-4by5">
-            <img src="https://bulma.io/images/placeholders/256x256.png">
-          </figure>
-           -->
-          
-        <!-- </aside> -->
-        
-        <!-- <div class="container row"> -->
-          
-          <section class="section">
-            <div class="container">
-              <figure class="image column">
-              </figure>
-                <h1 class="title has-text-centered has-text-black"> Top Shelf Recommendations</h1>
-                <p class="subtitle has-text-black">My first website with <strong>Bulma</strong>!</p> 
-              </div>
-            </section>
             
-            <div class="container">
-            <div class="columns is-size-5-mobile is-one-third">
-              <div class="column is-size-5-mobile">
-                <div class="notification is-dark">
-          
-                  <h1 class="title is-size-4 mb-4 has-text-centered has-text-white">Old Fashioned</h1>
-                  <p>The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with an orange slice or zest and a cocktail cherry. 
-                    It is traditionally served with ice in an old fashioned glass (also known as a rocks glass), which predated the cocktail.</p>
-                  <br>
-                  <img class="oldfashioned" src="./assets/Images/old-fashioned.png">
-                </div>
+          <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-end">
+                  <a class="navbar-item" href="index.html">Home</a>
+                  <a class="navbar-item" href="about.html">About</a>
+                  <a class="navbar-item" href="#">Contact</a>
+                  <a class="navbar-item is-active" href="search.html">Search</a>
               </div>
-              <div class="column is-mobile">
-                <div class="notification is-dark">
-                  <h1 class="title is-size-4 mb-4 has-text-centered">Cosmopolitan</h1>
-                  <p>A cosmopolitan is a cocktail made with vodka, Cointreau, cranberry juice, and lime juice.
-                    The cosmopolitan is a relative of cranberry coolers like the Cape Codder. Though often presented far differently, 
-                    the cosmopolitan also bears a likeness in composition to the kamikaze cocktail. </p>
-                  
-                  <br>
-                  <img class="drinks" src="./assets/Images/cosmo2.png">
-                </div>
-              </div>
-              <div class="column is-mobile">
-                <div class="notification is-dark">
-                  <h1 class="title is-size-4 mb-4 has-text-centered">Mojito</h1>
-                  <p>Mojito is a traditional Cuban punch. The cocktail often consists of five ingredients: white rum, sugar, lime juice, soda water, and mint. Its combination of sweetness, citrus, and herbaceous mint flavors is intended to complement the rum, and has made the mojito a popular summer drink. </p>
-                  <br>
-                  <img class="mojito" src="./assets/Images/mojito.png">
+          </div>
+      </div>
+  </nav>
 
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container">
+        <h1 class="title has-text-centered has-text-light">Discover Your Perfect Cocktail</h1>
+        
+        <p class="subtitle has-text-centered">Search from thousands of cocktail recipes</p>
+            
+        <!-- Search Section -->
+        <div class="columns is-centered">
+          <div class="column is-half">
+              <div class="search-box">
+                  <div class="field has-addons">
+                    <div class="control is-expanded">
+                      <input id="searchInput" class="input is-medium" type="text" placeholder="What'll you have?">
+                        </div>
+                            <div class="control">
+                              <button id="searchBtn" class="button is-medium">
+                                  <span class="icon"><i class="fas fa-search"></i></span>
+                                  <span>Search</span>
+                              </button>
+                            </div>
+                        </div>
+                        <div id="recentSearches" class="tags are-medium mt-3"></div>
+                    </div>
                 </div>
-              </div>
             </div>
-          <div id="youTubeVid1" class="container-max-width-780px is-flex-direction-column"></div>
+            
+            <!-- Results Section -->
+            <div id="resultsSection" class="mt-6" style="display: none;">
+                <div class="columns">
+                    <!-- Cocktail Details -->
+                    <div class="column is-one-third">
+                        <div class="card">
+                            <div class="card-content">
+                                <h2 id="drinkName" class="title is-4 has-text-light"></h2>
+                                <figure class="image is-1by1 drink-image mb-4">
+                                    <img id="drinkImg" src="" alt="Drink image">
+                                </figure>
+                                
+                                <h3 class="title is-5 has-text-light">Ingredients</h3>
+                                <ul id="drinkIngredients" class="ingredients-list"></ul>
+                                
+                                <h3 class="title is-5 has-text-light mt-4">Instructions</h3>
+                                <p id="drinkInstructions" class="has-text-light"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- YouTube Videos -->
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-content">
+                                <h2 class="title is-4 has-text-light">Video Tutorials</h2>
+                                <div id="youtubeResults" class="content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="mt-6">
+                <h2 class="title is-3 has-text-light has-text-centered">Top Shelf Recommendations</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="card recommendation" data-drink="Old Fashioned">
+                            <div class="card-content">
+                                <h3 class="title is-4 has-text-light">Old Fashioned</h3>
+                                <p>The old fashioned is a cocktail made by muddling sugar with bitters and water, adding whiskey, and garnishing with an orange slice or zest and a cocktail cherry.</p>
+                                <div class="has-text-centered mt-3">
+                                    <img src="https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg" alt="Old Fashioned" style="max-height: 200px; border-radius: 5px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card recommendation" data-drink="Cosmopolitan">
+                            <div class="card-content">
+                                <h3 class="title is-4 has-text-light">Cosmopolitan</h3>
+                                <p>A cosmopolitan is a cocktail made with vodka, Cointreau, cranberry juice, and lime juice. Perfect for those who enjoy a balance of sweet and tart flavors.</p>
+                                <div class="has-text-centered mt-3">
+                                    <img src="https://www.thecocktaildb.com/images/media/drink/kpsajh1504368362.jpg" alt="Cosmopolitan" style="max-height: 200px; border-radius: 5px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card recommendation" data-drink="Mojito">
+                            <div class="card-content">
+                                <h3 class="title is-4 has-text-light">Mojito</h3>
+                                <p>Mojito is a traditional Cuban punch. The cocktail often consists of five ingredients: white rum, sugar, lime juice, soda water, and mint.</p>
+                                <div class="has-text-centered mt-3">
+                                    <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Mojito" style="max-height: 200px; border-radius: 5px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+      
           
           <form>
             <h3>Add a Comment:</h3>
