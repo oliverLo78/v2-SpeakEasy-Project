@@ -1,15 +1,7 @@
-var youtubeApiKey = 'key=AIzaSyC5toGw1SSB32wE6uogT2Hk25_CWavryVo&'
-var recentDrinks = [];
-var drink;
-var input;
-var requestDrink;
-var apiRootCocktailURL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?';
-var requestVideo;
-var apiRootYouTubeURL = 'https://www.googleapis.com/youtube/v3/search?maxResults=3&safeSearch=moderate&videoEmbeddable=true&type=video&part=snippet&';
-var youTubeVid1;
-var youTubeRoot = 'https://www.youtube.com/embed/';
-var searchResultsVid1;
-var searchAgain;
+// API Keys (Replace with your actual keys)
+const COCKTAIL_API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
+const YOUTUBE_API_KEY = 'AIzaSyALVeo-GPPH2Qiw0MJbnfqwwjmFzHCLu1I';
+const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search';
 
 $(document).ready(function(){
 
