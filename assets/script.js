@@ -44,131 +44,189 @@ document.querySelectorAll('.recommendation').forEach(card => {
 // Initialize recent searches
 updateRecentSearches();
 
-function searchRecentDrinks(input){
-    document.getElementById("drinkPhoto").innerHTML = "";
-    document.getElementById("drinkName").innerHTML = "";
-    document.getElementById("drinkInst").innerHTML = "";
-    document.getElementById("drinkIngr").innerHTML = "";
-    document.getElementById("youTubeVid1").innerHTML = "";
+// Functions
+function handleSearch() {
+    const searchTerm = searchInput.value.trim();
+            
+    if (!searchTerm) {
+        showModal('Error', 'Please enter a cocktail name to search');
+        return;
+    }
+            
+    // Add to recent searches
+    if (!recentDrinks.includes(searchTerm)) {
+        recentDrinks.unshift(searchTerm);
+        if (recentDrinks.length > 5) recentDrinks.pop();
+        localStorage.setItem('recentDrinks', JSON.stringify(recentDrinks));
+        updateRecentSearches();
+        
+    }
 
-    var paramsString = 's={drink name}';
-    var searchParams = new URLSearchParams(paramsString);
-    searchParams.set('s', input);
-    var x = searchParams.toString();
+    // Fetch cocktail data
+    fetchCocktailData(searchTerm);
+            
+    // Fetch YouTube videos
+    fetchYouTubeVideos(searchTerm);
+        }
+        
+        function fetchCocktailData(cocktailName) {
+            fetch(`${COCKTAIL_API_URL}${cocktailName}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.drinks && data.drinks.length > 0) {
+                        displayCocktailData(data.drinks[0]);
+                        resultsSection.style.display = 'block';
+                    } else {
+                        showModal('No Results', 'No drinks found with that name. Please try another search.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching cocktail data:', error);
+                    showModal('Error', 'Failed to fetch cocktail data. Please try again later.');
+                });
+        }
 
-    requestDrink = apiRootCocktailURL+x;
-    console.log(requestDrink);
-    getDrink(requestDrink);
-    
-    var paramsString = 'q={search term}';
-    var searchParams = new URLSearchParams(paramsString);
-    searchParams.set('q', 'recipe'+input);
-    var x = searchParams.toString();
-    requestVideo = apiRootYouTubeURL+youtubeApiKey+x;
-    console.log(requestVideo);
-    getVideo(requestVideo);
-}
+        function displayCocktailData(drink) {
+            // Set drink name
+            drinkName.textContent = drink.strDrink;
+            
+            // Set drink image
+            drinkImg.src = drink.strDrinkThumb;
+            drinkImg.alt = drink.strDrink;
+            
+            // Set ingredients
+            drinkIngredients.innerHTML = '';
+            for (let i = 1; i <= 15; i++) {
+                const ingredient = drink[`strIngredient${i}`];
+                const measure = drink[`strMeasure${i}`];
+                
+                if (ingredient && ingredient.trim() !== '') {
+                    const li = document.createElement('li');
+                    li.textContent = `${measure ? measure : ''} ${ingredient}`;
+                    drinkIngredients.appendChild(li);
+                }
+            }
+            
+            // Set instructions
+            drinkInstructions.textContent = drink.strInstructions;
+        }
 
-$('#search').click(function drinkParams(){
-    var paramsString = 's={drink name}';
-    var searchParams = new URLSearchParams(paramsString);
-    searchParams.set('s', input);
-    var x = searchParams.toString();
-    requestDrink = apiRootCocktailURL+x;
-    console.log(requestDrink);
-    getDrink(requestDrink);
-    storeDrink();
-});
-
-$('#search').click(function videoParams(){
-    var paramsString = 'q={search term}';
-    var searchParams = new URLSearchParams(paramsString);
-    searchParams.set('q', 'recipe'+input);
-    var x = searchParams.toString();
-    requestVideo = apiRootYouTubeURL+youtubeApiKey+x;
-    console.log(requestVideo);
-    getVideo(requestVideo);
-});
-
-function getDrink(requestDrink){
-    fetch(requestDrink)
-        .then(function(response){
-        return response.json()
-        })
-        .then(function(data){
-            console.log(data.drinks);
-            var drinkName = document.createElement('h1');
-            drinkName.textContent = data.drinks[0].strDrink;
-            $('h1#drinkName').append(drinkName);
-            var drinkIng1 = document.createElement('li');
-            drinkIng1.textContent = data.drinks[0].strIngredient1;
-            var drinkIng2 = document.createElement('li');
-            drinkIng2.textContent = data.drinks[0].strIngredient2;
-            var drinkIng3 = document.createElement('li');
-            drinkIng3.textContent = data.drinks[0].strIngredient3;
-            var drinkIng4 = document.createElement('li');
-            drinkIng4.textContent = data.drinks[0].strIngredient4;
-            var drinkIng5 = document.createElement('li');
-            drinkIng5.textContent = data.drinks[0].strIngredient5;
-            var a = document.createElement('ul');
-            $(a).append(drinkIng1);
-            $(a).append(drinkIng2);
-            $(a).append(drinkIng3);
-            $(a).append(drinkIng4);
-            $(a).append(drinkIng5);
-            $('div#drinkIngr').append(a);
-            var drinkInst = document.createElement('p');
-            drinkInst.textContent = data.drinks[0].strInstructions;
-            $('div#drinkInst').append(drinkInst);
-            var thumbNail = data.drinks[0].strDrinkThumb;
-            var drinkPhoto = document.createElement('img');
-            drinkPhoto.setAttribute('src',thumbNail);
-            $('figure#drinkPhoto').append(drinkPhoto);
+        function fetchYouTubeVideos(searchQuery) {
+        // In a real implementation, you would use the YouTube API
+        // This is a mock implementation since we can't make actual API calls from this environment
+            
+            youtubeResults.innerHTML = `
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/jOfshHOuW_M" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="has-text-centered mt-3">Video tutorials for "${searchQuery}" would appear here</p>
+            `;
+            
+            // Actual implementation would look like this:
+            fetch(`${YOUTUBE_API_URL}?part=snippet&maxResults=3&q=${searchQuery}+cocktail+recipe&type=video&key=${YOUTUBE_API_KEY}`)
+                .then(response => response.json())
+                .then(data => {
+                    displayYouTubeVideos(data.items);
+                })
+                .catch(error => {
+                    console.error('Error fetching YouTube videos:', error);
+                    showModal('Error', 'Failed to fetch video tutorials. Please try again later.');
+                });
+            
+        }
+        
+        function displayYouTubeVideos(videos) {
+            youtubeResults.innerHTML = '';
+            
+            if (videos.length === 0) {
+                youtubeResults.innerHTML = '<p class="has-text-light">No video tutorials found</p>';
+                return;
+            }
+            
+            videos.forEach(video => {
+                const videoElement = document.createElement('div');
+                videoElement.className = 'mb-5';
+                videoElement.innerHTML = `
+                    <h3 class="title is-5 has-text-light">${video.snippet.title}</h3>
+                    <div class="video-container">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${video.id.videoId}" 
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                    </div>
+                `;
+                youtubeResults.appendChild(videoElement);
+            });
+        }
+        
+        function handleCommentSubmit(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const drinkType = document.getElementById('drinkType').value;
+            const comment = document.getElementById('comment').value;
+            const agreement = document.getElementById('agreement').checked;
+            
+            if (!username || !email || !comment) {
+                showModal('Error', 'Please fill in all required fields');
+                return;
+            }
+            
+            if (!agreement) {
+                showModal('Error', 'Please agree to share your email address');
+                return;
+            }
+            
+            // Save comment to localStorage
+            saveComment({
+                username,
+                email,
+                drinkType,
+                comment,
+                timestamp: new Date().toISOString()
+            });
+            
+            // Show success message
+            showModal('Success', 'Thank you for your comment!');
+            
+            // Reset form
+            commentForm.reset();
+        }
+        
+        function saveComment(comment) {
+            let comments = JSON.parse(localStorage.getItem('speakeasyComments')) || [];
+            comments.push(comment);
+            localStorage.setItem('speakeasyComments', JSON.stringify(comments));
+        }
+        
+        function updateRecentSearches() {
+            recentSearches.innerHTML = '';
+            
+            if (recentDrinks.length === 0) return;
+            
+            recentSearches.innerHTML = '<span class="tag is-dark is-medium">Recent Searches:</span>';
+            
+            recentDrinks.forEach(drink => {
+                const tag = document.createElement('span');
+                tag.className = 'tag is-danger is-medium mr-1';
+                tag.textContent = drink;
+                tag.style.cursor = 'pointer';
+                tag.addEventListener('click', () => {
+                    searchInput.value = drink;
+                    handleSearch();
+                });
+                recentSearches.appendChild(tag);
+            });
+        }
+        
+        function showModal(title, message) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modal.style.display = 'flex';
+        }
+        
+        // Initialize with a popular drink
+        window.addEventListener('load', () => {
+            searchInput.value = 'Margarita';
+            handleSearch();
         });
-}
-
-function getVideo(requestVideo){
-    fetch(requestVideo)
-        .then(function(response){
-        return response.json();
-        })
-        .then(function(data){
-        searchResultsVid1 = data.items[0].id.videoId;
-        youTubeVid1 = youTubeRoot + searchResultsVid1;
-        var a1 = document.createElement('iframe');
-        a1.setAttribute('class','has-ratio');
-        a1.setAttribute('width','640');
-        a1.setAttribute('height','360');
-        a1.setAttribute('src',youTubeVid1);
-        var b1 = document.createElement('figure');
-        b1.setAttribute('class','image is-16by9');
-        $(b1).append(a1);
-        $('div#youTubeVid1').append(b1);    
-    });
-}
-init();
-});
-
-
-// ****************************** Handlers ***************************************************** //
-// Select increment and decrement button elements
-// var count = 0;
-// var btnSearchEl = document.querySelector("#increment");
-// var countEl = document.querySelector("#count");
-// // var hideCardsEl = document.querySelector("#hideCards");
-
-// // Updates count on page
-// function setCounterText() {
-//     countEl.textContent = count;
-// }
-
-// function increment(event) {
-//     console.log(event);
-//     //
-// }
-
-
-// // Attach event listener to increment button element
-// btnSearchEl.addEventListener("click", increment);
-// // Attach event listener to decrement button element
-// hideCardsEl.addEventListener("click", hideCardsEl);
