@@ -11,6 +11,9 @@
             color: var(--light);
             min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
         }
         
         .navbar {
@@ -74,6 +77,13 @@
             margin: 2rem 0;
         }
         
+         .search-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
         .cocktail-card {
             background-position: center;
             background-size: cover;
@@ -151,7 +161,99 @@
             margin-top: 3rem;
             padding: 2rem 1.5rem;
         }
+
+        .button {
+            background: var(--highlight);
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+        }
         
+        .drink-image {
+            border-radius: 10px;
+            border: 3px solid var(--highlight);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ingredients-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .ingredients-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+        
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+        .recommendation {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .recommendation:hover {
+            transform: scale(1.03);
+        }
+
+         .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: var(--secondary);
+            border-radius: 10px;
+            padding: 2rem;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: var(--light);
+        }
+        
+        
+
+
+
+    
         @media (max-width: 768px) {
             .logo-text {
                 font-size: 2rem;
@@ -165,4 +267,3 @@
                 grid-template-columns: 1fr;
             }
         }
-
