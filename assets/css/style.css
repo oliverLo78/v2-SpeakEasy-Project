@@ -1,2 +1,168 @@
+:root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --highlight: #e94560;
+            --light: #f5f5f5;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--light);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--highlight);
+        }
+        
+        .logo-text {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--highlight);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero {
+            background: url('https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero-body {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .subtitle {
+            color: #ccc;
+            font-style: italic;
+        }
 
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cocktail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .cocktail-card {
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            height: 200px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cocktail-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+        }
+        
+        .cocktail-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .cocktail-info {
+            position: relative;
+            z-index: 1;
+            padding: 1rem;
+            width: 100%;
+        }
+        
+        .cocktail-name {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cocktail-ingredients {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .cocktail-card:hover .cocktail-ingredients {
+            display: block;
+        }
+        
+        .history-section {
+            margin: 4rem 0;
+        }
+        
+        .enter-button {
+            display: block;
+            margin: 2rem auto;
+            background: var(--highlight);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .enter-button:hover {
+            background: #c1121f;
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 3rem;
+            padding: 2rem 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .logo-text {
+                font-size: 2rem;
+            }
+            
+            .navbar-menu {
+                background: rgba(0, 0, 0, 0.9);
+            }
+            
+            .cocktail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
