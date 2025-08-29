@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Speakeasy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --highlight: #e94560;
+            --light: #f5f5f5;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--light);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--highlight);
+        }
+        
+        .logo-text {
+            font-family: 'Times New Roman', serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--highlight);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .subtitle {
+            color: #ccc;
+            font-style: italic;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .profile-img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid var(--highlight);
+            margin: 0 auto 1.5rem;
+        }
+        
+        .contact-info {
+            margin: 1rem 0;
+        }
+        
+        .contact-info a {
+            color: var(--light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem 0;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: var(--highlight);
+        }
+        
+        .icon {
+            margin-right: 0.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--highlight);
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 3rem;
+            padding: 2rem 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .logo-text {
+                font-size: 2rem;
+            }
+            
+            .navbar-menu {
+                background: rgba(0, 0, 0, 0.9);
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <i class="fa-solid fa-martini-glass-citrus fa-2x" style="color: #e94560;"></i>
+                    <span class="logo-text ml-2">Speakeasy</span>
+                </a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item is-active" href="about.html">About</a>
+                    <a class="navbar-item" href="#">Contact</a>
+                    <a class="navbar-item" href="search.html">Search</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered has-text-light">About Speakeasy</h1>
+            <p class="subtitle has-text-centered">Crafting the perfect cocktail experience</p>
+            
+            <div class="columns is-centered">
+                <div class="column is-two-thirds">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="has-text-light">
+                                Speakeasy is a modern cocktail discovery platform designed to help both novice and experienced 
+                                mixologists explore the world of cocktails. Our mission is to provide comprehensive information 
+                                about thousands of drinks, complete with recipes, ingredients, and video tutorials.
+                            </p>
+                            <br>
+                            <p class="has-text-light">
+                                Whether you're looking to master classic cocktails or discover new creations, Speakeasy offers 
+                                an intuitive interface to search, save, and share your favorite drink recipes. Our platform 
+                                combines data from TheCocktailDB API with video content from YouTube to create a rich, 
+                                immersive experience for cocktail enthusiasts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <h2 class="title has-text-centered has-text-light mt-6">Our Team</h2>
+            
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="card team-member">
+                        <div class="card-content">
+                            <img src="./assets/Images/oliver ProfilePic.jpg" 
+                                 alt="Oliver Lopez" class="profile-img">
+                            <h3 class="title is-3 has-text-light">Oliver Lopez</h3>
+                            <p class="subtitle is-5 has-text-light">JavaScript Application Developer</p>
+                            
+                            <div class="contact-info">
+                                <p>
+                                    <i class="fas fa-map-marker-alt icon"></i>
+                                    Orlando, FL
+                                </p>
+                                <p>
+                                    <i class="fas fa-briefcase icon"></i>
+                                    Remote or Hybrid | U.S. Citizen
+                                </p>
+                                <a href="mailto:oliverberto@gmail.com">
+                                    <i class="fas fa-envelope icon"></i>
+                                    oliverberto@gmail.com
+                                </a>
+                                <a href="tel:4077167133">
+                                    <i class="fas fa-phone icon"></i>
+                                    (407) 716-7133
+                                </a>
+                            </div>
+            
+                            <p class="has-text-light">
+                                Creative and technically skilled JavaScript Developer with full-stack capabilities and a 
+                                mission-driven mindset. Proficient in React, Node.js, REST APIs, SQL, and deploying scalable 
+                                applications in cloud-ready environments. Known for strong collaboration, clean code, and 
+                                delivering user-focused solutions for real-world challenges.
+                            </p>
+                            
+                            <div class="social-links">
+                                <a href="#" title="Portfolio">
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                                <a href="#" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
