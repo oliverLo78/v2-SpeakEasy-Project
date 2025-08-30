@@ -26,8 +26,6 @@ Type in the name of your favorite cocktail in the search bar and see the results
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 ![Bulma](https://img.shields.io/badge/bulma-00D0B1?style=for-the-badge&logo=bulma&logoColor=white)
 
-![BULMA Badge](https://wikiki.github.io/images/made-with-bulma.png?style=for-the-badge&logo=bulma&logoColor=white)
-
 
 ### Features:
 
@@ -44,13 +42,11 @@ As a user looking for a cocktail, I would like an application that allows me to 
 
 ## Screenshots
 
-![Password Generator Webpage Screenshot](./assets/Images/Speakeasy-Screenshot-1.png)
-&nbsp;\
-&nbsp;\
-![Password Generator Webpage Screenshot](./assets/Images/Speakeasy-Screenshot-2.png)
-&nbsp;
+![Image of Speakeasy app](./assets/Images/Screenshot%202025-08-29%20201137.png)
 
+![Image of Speakeasy app](./assets/Images/Screenshot%202025-08-29%20201304.png)
 
+![Image of Speakeasy app](./assets/Images/Screenshot%202025-08-29%20201354.png)
 
 ## Credits:
 
