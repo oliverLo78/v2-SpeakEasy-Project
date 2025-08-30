@@ -248,11 +248,59 @@
         .close:hover {
             color: var(--light);
         }
+
+             .team-member {
+            text-align: center;
+            padding: 2rem;
+        }
         
+        .profile-img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid var(--highlight);
+            margin: 0 auto 1.5rem;
+        }
         
-
-
-
+        .contact-info {
+            margin: 1rem 0;
+        }
+        
+        .contact-info a {
+            color: var(--light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem 0;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: var(--highlight);
+        }
+        
+        .icon {
+            margin-right: 0.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--highlight);
+        }
     
         @media (max-width: 768px) {
             .logo-text {
@@ -265,5 +313,10 @@
             
             .cocktail-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
             }
         }
